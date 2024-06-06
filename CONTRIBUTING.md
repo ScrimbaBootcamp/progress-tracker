@@ -26,6 +26,7 @@ When you fork a project, you can configure git to pull down changes from the ups
 2. Click on the '<> Code' button in that repo, and copy the URL.
 3. Back in the terminal, type `git remote add upstream`, paste the URL and hit Enter.
 4. To verify your remote repositories, type `git remote -v` and hit Enter. You should see something like this:
+
     ```$ git remote -v
         > origin    https://github.com/YOUR-USERNAME/YOUR-FORK.git (fetch)
         > origin    https://github.com/YOUR-USERNAME/YOUR-FORK.git (push)
