@@ -16,7 +16,8 @@ You should be redirected to your fork of the repository. In the top left corner 
 
 ## Continue in the terminal
 1. Open a terminal. 
-2. Change the current working directory to the location where you want the cloned directory. For example: `cd Users/Some-Directory/productivity-app`
+2. Change the current working directory to the location where you want the cloned directory. 
+For example: `cd Users/Some-Directory/productivity-app`
 3. Type `git clone` and paste the URL that you just copied. Hit enter. Your local clone will be created.
 
 ### Configure git to sync changes with main repo
@@ -26,11 +27,13 @@ When you fork a project, you can configure git to pull down changes from the ups
 2. Click on the '<> Code' button in that repo, and copy the URL.
 3. Back in the terminal, type `git remote add upstream`, paste the URL and hit Enter.
 4. To verify your remote repositories, type `git remote -v` and hit Enter. You should see something like this:
-    ```$ git remote -v
+    ```
+        $ git remote -v
         > origin    https://github.com/YOUR-USERNAME/YOUR-FORK.git (fetch)
         > origin    https://github.com/YOUR-USERNAME/YOUR-FORK.git (push)
         > upstream  https://github.com/ScrimbaBootcamp/productivity-app.git (fetch)
-        > upstream  https://github.com/ScrimbaBootcamp/productivity-app.git (push)```
+        > upstream  https://github.com/ScrimbaBootcamp/productivity-app.git (push)
+    ```
 
 You will now be able to keep your fork synced with the upstream repository using git.
 
