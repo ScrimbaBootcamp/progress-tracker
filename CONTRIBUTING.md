@@ -29,6 +29,7 @@ When you fork a project, you can configure git to pull down changes from the ups
 4. To verify your remote repositories, type `git remote -v` and hit Enter. You should see something like this:
     ```
         $ git remote -v
+
         > origin    https://github.com/YOUR-USERNAME/YOUR-FORK.git (fetch)
         > origin    https://github.com/YOUR-USERNAME/YOUR-FORK.git (push)
         > upstream  https://github.com/ScrimbaBootcamp/productivity-app.git (fetch)
