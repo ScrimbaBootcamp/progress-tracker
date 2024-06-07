@@ -16,7 +16,7 @@ You should be redirected to your fork of the repository. In the top left corner 
 
 ## Continue in the terminal
 1. Open a terminal. 
-2. Change the current working directory to the location where you want the cloned directory. 
+2. Change the current working directory to the location where you want the cloned directory.\ 
 For example: `cd Users/Some-Directory/productivity-app`
 3. Type `git clone` and paste the URL that you just copied. Hit enter. Your local clone will be created.
 
@@ -51,17 +51,17 @@ You will now be able to keep your fork synced with the upstream repository using
 ## Create a feature branch
 
 When you are working on a particular feature (or fixing a bug, or refactoring something), it can be a good practice to create a named branch. This allows you to isolate your changes from the main codebase and hopefully prevent conflicts and errors.
-If you are using the terminal, you can use these two commands:
-    ```
-    git branch [name-of-your-feature-branch]
-    git checkout [name-of-your-feature-branch]
-    ```
+If you are using the terminal, you can use these two commands:\
+```
+git branch [name-of-your-feature-branch]
+git checkout [name-of-your-feature-branch]
+```
 First you are creating the branch, and then you are switching to that branch to make your changes. 
-You can accomplish the same thing in one line though, like this:
-    `git checkout -b [name-of-your-feature-branch]`
+You can accomplish the same thing in one line though, like this:\
+`git checkout -b [name-of-your-feature-branch]`
 
-You will then create changes to stage, commit, push, and have merged. Once your branch has been merged with the main repository, you can delete your feature branch from the terminal, with one line:
-    `git branch _-d_ [name-of-your-feature-branch]`
+You will then create changes to stage, commit, push, and have merged. Once your branch has been merged with the main repository, you can delete your feature branch from the terminal, with one line:\
+`git branch _-d_ [name-of-your-feature-branch]`
 
 ## Stage, commit, and push changes that you make
 
