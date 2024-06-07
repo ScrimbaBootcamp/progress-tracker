@@ -51,7 +51,7 @@ You will now be able to keep your fork synced with the upstream repository using
 ## Create a feature branch
 
 When you are working on a particular feature (or fixing a bug, or refactoring something), it can be a good practice to create a named branch. This allows you to isolate your changes from the main codebase and hopefully prevent conflicts and errors.
-If you are using the terminal, you can use these two commands:\
+ If you are using the terminal, you can use these two commands:\
 ```
 git branch [name-of-your-feature-branch]
 git checkout [name-of-your-feature-branch]
@@ -62,6 +62,7 @@ You can accomplish the same thing in one line though, like this:\
 
 You will then create changes to stage, commit, push, and have merged. Once your branch has been merged with the main repository, you can delete your feature branch from the terminal, with one line:\
 `git branch _-d_ [name-of-your-feature-branch]`
+
 
 ## Stage, commit, and push changes that you make
 
