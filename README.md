@@ -1,5 +1,5 @@
-# Scrimba Bootcamp Productivity App
-Bootcamp students will contribute to this open source project, where we will build a productivity app to track activity and accomplishments in the Scrimba bootcamp.
+# Scrimba Bootcamp Progress Tracker
+Bootcamp students will contribute to this open source project, where we will build an app to keep track of activity and accomplishments in the Scrimba bootcamp.
 
 Here is some important information that should be included in a README for an open source project:
 
