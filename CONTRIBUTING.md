@@ -67,7 +67,7 @@ You will then create changes to stage, commit, push, and have merged. Once your 
 ## Stage, commit, and push changes that you make
 ### Staging - `git add`
 The `git add` command stages adds new or changed files to the staging area. You cannot commit files without first staging them. You can commit files individually, for example:\
-`git add CONTRIBUTING.md`
+`git add CONTRIBUTING.md`\
 If you have made changes in multiple files, you can stage them all at once, like this:\
 `git add .`
 ### Commiting - `git commit`
