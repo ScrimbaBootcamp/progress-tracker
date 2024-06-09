@@ -65,8 +65,19 @@ You will then create changes to stage, commit, push, and have merged. Once your 
 
 
 ## Stage, commit, and push changes that you make
-
-<!-- using git in the terminal -->
+### Staging - `git add`
+The `git add` command stages adds new or changed files to the staging area. You cannot commit files without first staging them. You can commit files individually, for example:/
+`git add CONTRIBUTING.md`
+If you have made changes in multiple files, you can stage them all at once, like this:/
+`git add .`
+### Commiting - `git commit`
+Once your files are staged, you will be able to 'commit' them. You are saving the files while also tracking the changes that you have made in your feature branch. Commits are made with a short message that describes the changes that have been made. To do this in one line, type the following in the terminal:/
+`git commit -m "added this/deleted that/fixed bug/et al"`
+### Pushing - `git push`
+Committing changes means they are saved to your local branch. To have the changes reflected on the remote branch you will need to push these changes. Using `git push` on its own only updates the corresponding branch on the remote. If you are working in a feature branch and want to update your main branch or the upstream branch with your changes, you will use one of these commands:/
+`git push -u origin [name-of-your-feature-branch]`/
+`git push -u upstream [name-of-your-feature-branch]`
+<!-- need to detail steps for creating an upstream path -->
 
 ## Submit a pull request
 <!-- GitHub -->
