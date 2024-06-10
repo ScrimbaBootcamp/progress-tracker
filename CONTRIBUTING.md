@@ -61,7 +61,7 @@ You can accomplish the same thing in one line though, like this:\
 `git checkout -b [name-of-your-feature-branch]`
 
 You will then create changes to stage, commit, push, and have merged. Once your branch has been merged with the main repository, you can delete your feature branch from the terminal, with one line:\
-`git branch _-d_ [name-of-your-feature-branch]`
+`git branch -d [name-of-your-feature-branch]`
 
 
 ## Stage, commit, and push changes that you make
@@ -80,6 +80,10 @@ Committing changes means they are saved to your local branch. To have the change
 <!-- need to detail steps for creating an upstream path -->
 
 ## Submit a pull request
-<!-- GitHub -->
+1. On GitHub, navigate to the project's [main repository](https://github.com/ScrimbaBootcamp/progress-tracker). 
+2. Above the list of files, you will see a banner with a 'Compare & Pull Request' button. Click that to create a pull request for your feature branch.
+3. On the next page, verify the base repository and head repository. The base repository will likely be `ScrimbaBootcamp/progress-tracker, base:main`, and the head repository should be `[your-username]/progress-tracker, base:[feature-branch]`. These are both drop-down menus if you need to change something.
+4. Type a title and a description for your pull request. You can use GitHub's formatting palette or use Markdown to format as applicable.
+5. When you are finished, click 'Create Pull Request'.
 
 ## Resolving Merge Conflicts
