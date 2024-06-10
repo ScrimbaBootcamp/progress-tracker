@@ -82,8 +82,9 @@ Committing changes means they are saved to your local branch. To have the change
 ## Submit a pull request
 1. On GitHub, navigate to the project's [main repository](https://github.com/ScrimbaBootcamp/progress-tracker). 
 2. Above the list of files, you will see a banner with a 'Compare & Pull Request' button. Click that to create a pull request for your feature branch.
-3. On the next page, verify the base repository and head repository. The base repository will likely be `ScrimbaBootcamp/progress-tracker, base:main`, and the head repository should be `[your-username]/progress-tracker, base:[feature-branch]`. These are both drop-down menus if you need to change something.
-4. Type a title and a description for your pull request. You can use GitHub's formatting palette or use Markdown to format as applicable.
-5. When you are finished, click 'Create Pull Request'.
+3. On the page to create a new pull request, click `compare across forks'.
+4. On the next page, verify the base repository and head repository. The base repository will likely be `ScrimbaBootcamp/progress-tracker, base:main`, and the head repository should be `ScrimbaBootcamp/progress-tracker, base:[feature-branch]`. These are both drop-down menus if you need to change something.
+5. Type a title and a description for your pull request. You can use GitHub's formatting palette or use Markdown to format as applicable.
+6. When you are finished, click 'Create Pull Request'.
 
 ## Resolving Merge Conflicts
