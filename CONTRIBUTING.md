@@ -2,7 +2,7 @@
 To contribute to an open source project, you will follow the git workflow. You will fork the main repository, clone it to your machine, make changes (in a branch), and follow steps to submit a pull request - so your changes can be merged with the main repo.
 
 ## Get started
-1. Go to [the main repository](https://github.com/ScrimbaBootcamp/productivity-app).
+1. Go to [the main repository](https://github.com/ScrimbaBootcamp/project-tracker).
 2. Fork the project.
 <!-- insert screenshot here -->
 3. Under 'Owner', you should see your own GitHub account, followed by 'productivity-app'.
@@ -17,13 +17,13 @@ You should be redirected to your fork of the repository. In the top left corner 
 ## Continue in the terminal
 1. Open a terminal. 
 2. Change the current working directory to the location where you want the cloned directory.\
-For example: `cd Users/Some-Directory/productivity-app`
+For example: `cd Users/Some-Directory/project-tracker`
 3. Type `git clone` and paste the URL that you just copied. Hit enter. Your local clone will be created.
 
 ### Configure git to sync changes with main repo
 When you fork a project, you can configure git to pull down changes from the upstream repository into the local clone of your fork in addition to submitting requests to merge changes you've made.
 
-1. In GitHub, go back to the project's [main repository](https://github.com/ScrimbaBootcamp/productivity-app).
+1. In GitHub, go back to the project's [main repository](https://github.com/ScrimbaBootcamp/project-tracker).
 2. Click on the '<> Code' button in that repo, and copy the URL.
 3. Back in the terminal, type `git remote add upstream`, paste the URL and hit Enter.
 4. To verify your remote repositories, type `git remote -v` and hit Enter. You should see something like this:
@@ -32,8 +32,8 @@ When you fork a project, you can configure git to pull down changes from the ups
 
         > origin    https://github.com/YOUR-USERNAME/YOUR-FORK.git (fetch)
         > origin    https://github.com/YOUR-USERNAME/YOUR-FORK.git (push)
-        > upstream  https://github.com/ScrimbaBootcamp/productivity-app.git (fetch)
-        > upstream  https://github.com/ScrimbaBootcamp/productivity-app.git (push)
+        > upstream  https://github.com/ScrimbaBootcamp/project-tracker.git (fetch)
+        > upstream  https://github.com/ScrimbaBootcamp/project-tracker .git (push)
     ```
 
 You will now be able to keep your fork synced with the upstream repository using git.
