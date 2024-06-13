@@ -1,6 +1,13 @@
 # Contributing to This Project
 To contribute to an open source project, you will follow the git workflow. You will fork the main repository, clone it to your machine, make changes (in a branch), and follow steps to submit a pull request - so your changes can be merged with the main repo.
 
+## General Guidelines
+1. Look through our [Issues](https://github.com/ScrimbaBootcamp/progress-tracker/issues), and see if there is one you would like to take on. If there isn't an issue for a change you would like to make, please create a new Issue.
+2. Ask to be assigned to an issue, and tag the maintainer(s). Pull requests without a corresponding issue may or may not be accepted.
+3. Please work on one issue at a time in order to avoid miscommunication. If you find there is something else you would like to change while working on your issue, please follow the previous two steps to create a new Issue and - if you would like to work on it - ask to be assigned.
+4. If you see code that was written by another contributor that you feel could be improved, you might wish to tag them in the issue that you create so that you can discuss potential changes and decide who will work on this issue. One or both of you may then request assignment to the issue.
+5. Once you have been assigned to an issue, you can follow the protocol below.
+
 ## Get started
 1. Go to [the main repository](https://github.com/ScrimbaBootcamp/project-tracker).
 2. Fork the project.
@@ -33,7 +40,7 @@ When you fork a project, you can configure git to pull down changes from the ups
         > origin    https://github.com/YOUR-USERNAME/YOUR-FORK.git (fetch)
         > origin    https://github.com/YOUR-USERNAME/YOUR-FORK.git (push)
         > upstream  https://github.com/ScrimbaBootcamp/project-tracker.git (fetch)
-        > upstream  https://github.com/ScrimbaBootcamp/project-tracker .git (push)
+        > upstream  https://github.com/ScrimbaBootcamp/project-tracker.git (push)
     ```
 
 You will now be able to keep your fork synced with the upstream repository using git.
