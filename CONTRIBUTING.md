@@ -45,7 +45,14 @@ When you fork a project, you can configure git to pull down changes from the ups
 
 You will now be able to keep your fork synced with the upstream repository using git.
 
-<!-- Add steps for [syncing a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) -->
+### Keep your branch up to date
+Because we have multiple contributors who may be working on changes simultaneously, it is possible that we will encounter merge conflicts. This happens when changes have been made on the same line(s) in the same file(s) from two or more branches. It isn't always possible to avoid this, however, you can reduce the chances of this by syncing your branch with the upstream repository before pushing your own changes upstream. To do this, first pull the changes to your branch.  In the terminal, enter:\
+`git pull upstream main` \
+Now, make sure that your own fork of the project is synced as well. Enter:\
+`git push origin main` \
+Then you can continue in the git workflow: checkout -> add -> commit -> push -> pull -> and so on.
+<!-- [syncing a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) -->
+### Merge conflicts
 
 ## Continue in GitHub Desktop
 
