@@ -11,7 +11,7 @@ To contribute to an open source project, you will follow the git workflow. You w
 ## Get started
 1. Go to [the main repository](https://github.com/ScrimbaBootcamp/project-tracker).
 2. Fork the project.
-<!-- insert screenshot here -->
+![screenshot of fork button in Github](./assets/images/Fork-screenshot.png)
 3. Under 'Owner', you should see your own GitHub account, followed by 'productivity-app'.
 4. Look at the other options. If you would like you can add a description, you can. You shouldn't need to change the branch that is being copied.
 5. Click 'Create Fork'
