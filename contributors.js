@@ -10,4 +10,11 @@
         gitHub: "https://github.com/eram23",
         avatar: ""
     },
+    {
+        name: "Fadumo Ahmed",
+        linkedIn: "#",
+        gitHub: "https://github.com/fame372",
+        avatar: "url('fadumo-avator-photo')"
+    },
+    
 ]
