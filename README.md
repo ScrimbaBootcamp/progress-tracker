@@ -14,7 +14,7 @@ We will be building this app with HTML, CSS and JavaScript. As we progress, we w
 - [MIT License](https://github.com/ScrimbaBootcamp/progress-tracker/blob/main/LICENSE)
 - [Scrimba Bootcamp Discord (collaborative-work channel)](https://discord.com/channels/684009642984341525/981289757604741180)
 
-<!-- bootcamp-progress-tracker.netlify.app -->
+
 <!-- Here is some important information that should be included in a README for an open source project:
 
 - [x] Project title and summary
