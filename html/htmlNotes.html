@@ -1,0 +1,209 @@
+<h2>HTML</h2>
+<p>Hypertext Markup Language</p>
+<p>Used for standard document design in websites</p>
+<div class="accordion first-accordion">
+    <h3 class="accordion-name">Notes<span class="accordion-arrow first-arrow"></span></h3>
+    <ul class="inner-accordion-content" style="display: block;">
+        <li>Add <code><title></title></code> Tags - say why</li>
+        <li>Add <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang"
+                target="_blank" alt="documentation on the lang attribute">html lang attribute</a> to
+            your header <code><html lang="en"></code> - sets the language of the content on the page
+        </li>
+        <li>Following heading structure <blockcode>&lt;h1&gt;</blockcode> > <blockcode>&lt;h2&gt;</blockcode> > <blockcode>&lt;h3&gt;</blockcode> is good for Accessibility 
+            (it's what the screen-readers expect) and SEO.
+        </li>
+        <li>You can drag and drop HTML file into browser and it will show its content in the browser.</li>
+        <li>Tags without closing tags can be "closed" by ending it in <blockcode>/</blockcode>. This is benificial for other developers coming in and reading your code.</li>
+        <li>Width is an attribute that can be added outside of the style attribute, this is not valid HTML.</li>
+        <li>Div is short for divider.</li>
+        <li>alt + shft + F organizes code indents.</li>
+        <li>HTML Document Tree.</li>
+        <li>Src-set helps render different images per browser size.</li>
+        <li>Input has type attributes checkbox, color, date, text, password, time, file, 
+            <a href="https://www.w3schools.com/tags/att_input_type.asp" target="_blank" alt="attribute input types">ect.</a>
+        </li>
+        <li>Input has a placeholder attribute.</li>
+        <li>Head holds metadata - styles, titles, scripts.</li>
+        <li><blockcode>&lt;link rel="stylesheet" href="styles.css"&gt;</blockcode> links to an external css file and goes in the head.</li>
+        <li>Metadata controls what is seen when a user shares the link.</li>
+        <li>Head holds the tags you see on the page.</li>
+        <li><blockcode>&lt;!doctype html&gt;</blockcode> specifies html version (html 5)</li>
+        <li>dl, description list, is used as a contianer for a list of terms, it encloses a list of groups of terms, and is commonly used to implement a glossory or display metadata 
+            (as key-value pairs).
+        </li>
+        <li class="sub-list"><span>Why write Alt Text?</span>
+            <ul>
+                <li>Makes site more accessible.</li>
+                <li>Fallback incase the image doesn't load.</li>
+                <li>Helps the site rank higher on google.</li>
+            </ul>
+        </li>
+        <li class="sub-list"><span>Rules to writing alt text:</span>
+            <ul>
+                <li>Don't use "image of".</li>
+                <li>Be concise (less than 125 characters), a lot of screen readers will cut off after 125 characters.</li>
+                <li>How would you describe the image over the phone?</li>
+            </ul>
+        </li>
+        <li>ctrl + d = highlights all similar text and changes the appropriate text.</li>
+        <li>Setting the Viewport tells the computer not to shrink the website. <blockcode>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</blockcode>.</li>
+        <li class="sub-list"><span><a href="https://developer.mozilla.org/en-US/docs/Web/Manifest" target="_blank" alt="web application manifest documentation">Web Applciation Manifest</a>. 
+            manifest.json</span>
+            <ul>
+                <li>Tells chrome the info it needs to hook program into chrome.</li>
+                <li>Tells name, version, icon, ect.</li>
+            </ul>
+        </li>
+        <li><blockcode>&lt;article&gt;</blockcode> A piece of content on your page that can stand on it's own. E.g. a product card, a blog post etc.</li>
+        <li><blockcode>&lt;section&gt;</blockcode> Represents a generidc standalone section of a document, which doesn't have a more specific semantic element to represent it.</li>
+        <li class="sub-list"><span><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset" target="_blank" alt="the field set element documentation">
+            <blockcode>&lt;fieldset&gt;</blockcode></a> is a child of a form</span>
+            <ul>
+                <li>It is used to group several controls within a web form.</li>
+                <li>Visually, it wraps the controls with a border.</li>
+                <li>Add the <blockcode>&lt;legend&gt;</blockcode> to add a caption for the fieldset.</li>
+                <li>There can be multiple fieldsets per form.</li>
+            </ul>
+        </li>
+        <li class="sub-list"><span><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details" target="_blank" alt="the details discosure element documentation">
+            <blockcode>&lt;details&gt;</blockcode></a> and <blockcode>&lt;summary&gt;</blockcode> create a clickable accordon.</span>
+            <ul>
+                <li>However it is not <a href="https://daverupert.com/2019/12/why-details-is-not-an-accordion/" target="_blank" alt="Why the details tag is Not an Accordion">
+                    accessible</a>.
+                </li>
+                <li>style the marker with ::marker</li>
+            </ul>
+        </li>
+        <li class="sub-list"><span><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture" target="_blank" alt="the picture element documentation"><blockcode>
+            &lt;picture&gt;</blockcode></a></span>
+            <ul>
+                <li>Has more flexibility in specifying image sources than using <blockcode>&lt;img src="URL"&gt;</blockcode></li>
+                <li>Uses multiple images to fill the browser viewport more responsively.</li>
+                <li>Contains two tags, one or more source tags (with media and srcset attributres), and one img tag (for browsers that don't support the picture tag)</li>
+                <li><blockcode>&lt;source media="(max-width: 600px)" srcset="url"&gt;</blockcode> - mobile image</li>
+                <li><blockcode>&lt;source media="(min-width: 601px)" srcset="url"&gt;</blockcode> - desktop image</li>
+                <li><blockcode>&lt;img src="URL"&gt;</blockcode> - fallback image</li>
+            </ul>
+        </li>
+        <li><blockcode>&lt;header&gt;</blockcode> is for site title, logo, and nav.</li>
+        <li><blockcode>&lt;footer&gt;</blockcode> is for copyright, terms and conditions.</li>
+        <li><blockcode>&lt;main&gt;</blockcode> is for a pages unique content.</li>
+        <li>hotlinking (bad) is using an image from a remote source.</li>
+        <li>Use buttons for actions that affect the front-end or back-end (think JS). Interaction.</li>
+        <li>Use links for navigation to somwehre on the same page, within the site, or elsewhere on the internet. Navigation.</li>
+        <li>Use correct button vs link for accessibility.</li>
+        <li>Having too many font weight options when selecting a font can slow the site down.</li>
+        <li>Linking the form label to the form input will make the input field focused when you click the label.</li>
+        <li class="sub-list"><span>Validation Attributes</span>
+            <ul>
+                <li>required</li>
+                <li>min-length="number"</li>
+                <li>max-length="number"</li>
+                <li>min="number"</li>
+                <li>max="number"</li>
+                <li>pattern="[allowed characters (example: [a-zA-Z0-9]+(allowing a string of any length, without you only allow 1 character))"</li>
+                <li>adding {total number you want} instead of + makes the user have to add a specific number to the field.</li>
+            </ul>
+        </li>
+        <li>Most HTML files load from top to bottom, put script tags for JS at bottom of the file, below the main tag, so the DOM elements have loaded.</li>
+        <li>Add aria-label when you have inputs but don't want labels.</li>
+        <li>To connect a label and input write <blockcode>&lt;label for="name"&gt;&lt;&lt;/label&gt;&lt;input value="name" /&gt;</blockcode></li>
+        <li>To write a radio btn write <blockcode>&lt;label for="name">&lt;</blockcode>label?&gt;&lt;input value="name" name="connectingRadioBtns"/&gt;
+            </blockcode></li>
+    </ul>
+</div>
+<div class="accordion">
+    <h3 class="accordion-name">Resources<span class="accordion-arrow"></span></h3>
+    <dl class="inner-accordion-content">
+        <dt><a href="https://app.netlify.com/" target="_blank"
+                alt="goes to the netlify site which is used to deploy personal code">Netlify</a></dt>
+            <dd>Deploys a version of your code to a site for free.</dd>
+        <dt><a href="https://courses.kevinpowell.co/conquering-responsive-layouts" target="_blank" alt="course about conqueuring responsive layouts">Kevin Powel - Conquring Responsive Layouts</a></dt>
+            <dd>Free 21 day course about responsive design.</dd>
+        <dt><a href="https://favicon.io/favicon-converter/" target="_blank" alt="Converts images to .io for favicon use">Favicon Converter</a></dt>
+            <dd>Converts images to .io for favicon use.</dd>
+            <dd>Download all files onto website, has multiple sizes for clear for image quality.</dd>
+            <dd>Copy and paste link text beneath title tag.</dd>
+            <dd>site.webmanifest lets us show the image on the home screen of our phones when creating a quicklink.</dd>
+    </dl>
+</div>
+<div class="accordion">
+    <h3 class="accordion-name">Definitions<span class="accordion-arrow"></span></h3>
+    <dl class="inner-accordion-content">
+        <dt><blockcode>&lt;ol&gt;</blockcode></dt>
+            <dd>Ordered List</dd>
+        <dt><blockcode>&lt;ul&gt;</blockcode></dt>
+            <dd>Unordered List</dd>
+        <dt><blockcode>&lt;li&gt;</blockcode></dt>
+            <dd>List Item</dd>
+        <dt><blockcode>&lt;dl&gt;</blockcode></dt>
+            <dd>Description List</dd>
+            <dd>The parent element that encloses the list of terms and descriptions.</dd>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl"
+                target="_blank"><blockcode>&lt;dt&gt;</blockcode></a></dt>
+            <dd>Description Term</dd>
+            <dd>The child element that specifies a term in a description list, must be used inside a dl tag.</dd>
+        <dt><blockcode>&lt;dd&gt;</blockcode></dt>
+            <dd>Description Details</dd>
+            <dd>The child element that provides the description, definition, or value for the proceding dt tag in a dl tag.</dd>
+        <dt>Web Standards</dt>
+            <dd>Guidlines and practices for the creation and delivery of content on the world wide web.</dd>
+            <dd>These standards are crucial for ensuring web content is accessible, reliable, and compatable, across different devices and platforms.</dd>
+            <dd>The primary organization responsible for web standards is the <a href="https://www.w3.org/standards/" target="_blank" alt="web standard blueprints by w3c">
+                world wide web consortium (w3c)</a>.</dd>
+        <dt>Core HTML Tags</dt>
+            <dd><blockcode>&lt;a&gt;</blockcode> for a link.</dd>
+            <dd><blockcode>&lt;b&gt;</blockcode> to make bold text.</dd>
+            <dd><blockcode>&lt;strong&gt;</blockcode> to make bold text with screen-reader emphasis.</dd>
+            <dd><blockcode>&lt;body&gt;</blockcode> for the main HTML part.</dd>
+            <dd><blockcode>&lt;br&gt;</blockcode> to make a break.</dd>
+            <dd><blockcode>&lt;div&gt;</blockcode> is a division or part of an HTML document.</dd>
+            <dd><blockcode>&lt;h1&gt;</blockcode> is for titles.</dd>
+            <dd><blockcode>&lt;i&gt;</blockcode> to make italic text.</dd>
+            <dd><blockcode>&lt;img&gt;</blockcode> for images in the document.</dd>
+            <dd><blockcode>&lt;ol&gt;</blockcode> is an ordered list.</dd>
+            <dd><blockcode>&lt;ul&gt;</blockcode> is an unordered list.</dd>
+            <dd><blockcode>&lt;li&gt;</blockcode> is a list item.</dd>
+            <dd><blockcode>&lt;p&gt;</blockcode> for paragraph</dd>
+            <dd><blockcode>&lt;span&gt;</blockcode> to style part of the text inline.</dd>
+        <dt>Nesting</dt>
+            <dd>Tags inside other tags (ul, li) creating the tree structure of html tags.</dd>
+        <dt>Document Structure</dt>
+            <dd>The pattern the HTML document should follow (html, head, body, header, main, footer)</dd>
+        <dt>Progressive Web App (PWA)</dt>
+            <dd>Turns a web app into an app looking web app.</dd>
+            <dd><blockcode>{
+                "name": "",
+                "short_name": "",
+                "icons":
+                    [
+                        {"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},
+                        {"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}
+                    ],
+                "theme_color": "#ffffff",
+                "background_color": "#ffffff",
+                "display": "standalone"
+            }</blockcode></dd>
+            <dd><blockcode>theme_color</blockcode> changes the color of the upper nav in the phone.</dd>
+            <dd><blockcode>background_color</blockcode> is the color that will show when your app hasn't loaded yet.</dd>
+            <dd><blockcode>"display": "standalone"</blockcode> makes web app look like standalone application and takes away extra browser things.</dd>
+        <dt><blockcode>&lt;modal&gt;</blockcode> / <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog" target="_blank" alt="the dialog element documentation">dialog</a></dt>
+            <dd>A popup that appears on top of the current page.</dd>
+            <dd>The modal takes priority and prevents interactions with the rest of the page.</dd>
+    </dl>
+</div>
+<div class="accordion">
+    <h3 class="accordion-name">Questions<span class="accordion-arrow"></span></h3>
+    <ul class="inner-accordion-content">
+        <li>Why is it target="_blank"?</li>
+        <li>What does rel mean?</li>
+        <li>is there a way to make VS Code not auto finish my quotes when I type one?</li>
+        <li>Same class and id Yes or No?</li>
+    </ul>
+</div>
+<div class="accordion">
+    <h3 class="accordion-name">Opinions<span class="accordion-arrow"></span></h3>
+    <ul class="inner-accordion-content">        
+        <li>Having the same class and id on an element makes it easier to relate the css and js, especially if you avoid using divs in css.</li>
+    </ul>
+</div>
