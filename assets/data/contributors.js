@@ -14,7 +14,12 @@
         name: "Fadumo Ahmed",
         linkedIn: "#",
         gitHub: "https://github.com/fame372",
-        avatar: "url('fadumo-avator-photo')"
+        avatar: "url('./assets/images/contributors/fadumo-avator-photo.jpeg')"
     },
-    
+    {
+        name: "Geofrey Le Meur",
+        linkedIn: "https://www.linkedin.com/in/geoffreylemeur/",
+        gitHub: "https://github.com/BuckyBuck135",
+        avatar: "url('./assets/images/contributors/geoffrey-avatar.png')"
+    },
 ]
