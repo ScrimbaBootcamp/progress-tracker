@@ -11,7 +11,7 @@ To contribute to an open source project, you will follow the git workflow. You w
 ## Get started
 1. Go to [the main repository](https://github.com/ScrimbaBootcamp/project-tracker).
 2. Fork the project.
-![screenshot of fork button in Github](./assets/images/Fork-screenshot.png)
+![screenshot of fork button in Github](./assets/images/docs/Fork-screenshot.png)
 3. Under 'Owner', you should see your own GitHub account, followed by 'productivity-app'.
 4. Look at the other options. If you would like you can add a description, you can. You shouldn't need to change the branch that is being copied.
 5. Click 'Create Fork'
@@ -71,7 +71,7 @@ When you fork a project, you can configure git to pull down changes from the ups
 
 1. In GitHub, go back to the project's [main repository](https://github.com/ScrimbaBootcamp/project-tracker), known as the `upstream`.
 2. Click on the '<> Code' button in that repo, and copy the URL.
-3. Back in VS Code, click on `Source Control`, the the `...` button to open a menu with more actions. There, click on `Add remote`, paste the URL, name it `upstream` and hit Enter.
+3. Back in VS Code, click on `Source Control`, then on the `...` button to open a menu with more actions. There, click on `Add remote`, paste the URL, name it `upstream` and hit Enter.
 ![add-remote](./assets/images/docs-vscode-gui/7-add-remote.jpg)
 
 ### Keep your branch up to date
