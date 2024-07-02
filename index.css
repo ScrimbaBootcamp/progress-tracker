@@ -50,7 +50,7 @@ header{
 }
 .nav-items a {
   text-decoration: none;
-  color: unset;
+  /* color: unset; */
 }
 .nav-items .active{
   border-bottom: 3px solid var(--medium-gray);
