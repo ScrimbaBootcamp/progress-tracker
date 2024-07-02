@@ -14,7 +14,60 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+/*Header Styles */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  align-items: center;
+  display: flex; 
+  margin-right: 40px; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
 
+.logo img {
+  height: 70px; 
+  width: auto; 
+}
+.nav-menu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none; 
+}
+.nav-items{
+  text-decoration: none;
+  margin-right: 20px;
+}
+.nav-items a {
+  text-decoration: none;
+  color: unset;
+}
+.nav-items .active{
+  border-bottom: 3px solid var(--medium-gray);
+}
+.nav-items a:hover {
+  background-color: var(--medium-gray);
+  color: var(--white);
+}
+.btn-contribute{
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 20px;
+  background-color: var(--medium-gray);
+  color: var(--white);
+  border: 0;
+  cursor: pointer;
+}
 .hero_section {
   width: 100vw;
   height: 80vh;
