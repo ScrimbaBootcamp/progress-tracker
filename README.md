@@ -7,10 +7,10 @@ Aside from the experience that students will gain through their contributions, t
 
 ## Tech and Tools
 We will be building this app with HTML, CSS and JavaScript. As we progress, we will make decisions about package management, data storage, and authentication, likely incorporating Vite and Firebase. Presently there is no project setup that is required before adding to the codebase.
-
+x
 ## Helpful links:
 - [Contributing Guidlines](https://github.com/ScrimbaBootcamp/progress-tracker/blob/main/CONTRIBUTING.md)
-- [Code of conduct](https://github.com/ScrimbaBootcamp/progress-tracker)<!-- << file name here -->
+- [Code of conduct](https://github.com/ScrimbaBootcamp/progress-tracker/blob/main/CODE_OF_CONDUCT.md)
 - [MIT License](https://github.com/ScrimbaBootcamp/progress-tracker/blob/main/LICENSE)
 - [Scrimba Bootcamp Discord (collaborative-work channel)](https://discord.com/channels/684009642984341525/981289757604741180)
 
