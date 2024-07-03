@@ -1,11 +1,11 @@
 :root {
-  --white: #FFFFFF;
-  --dark-gray: #1E1E1E;
-  --medium-dark-gray: #2A3731;
-  --medium-gray: #5A766A;
-  --light-gray: #77978A;
-  --light-green: #F4FEFA;
-  --red: #FF4B37;
+  --white: #ffffff;
+  --dark-gray: #1e1e1e;
+  --medium-dark-gray: #2a3731;
+  --medium-gray: #5a766a;
+  --light-gray: #77978a;
+  --light-green: #f4fefa;
+  --red: #ff4b37;
 }
 
 * {
@@ -15,59 +15,108 @@
   font-family: "Roboto", sans-serif;
 }
 /*Header Styles */
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.nav{
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .logo {
   align-items: center;
-  display: flex; 
-  margin-right: 40px; 
+  display: flex;
+  margin-right: 40px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 10px;
 }
 
 .logo img {
-  height: 70px; 
-  width: auto; 
+  height: 70px;
+  width: auto;
 }
-.nav-menu{
+
+.nav-menu {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
-  list-style: none; 
+  list-style: none;
 }
-.nav-items{
+.nav-items {
   text-decoration: none;
   margin-right: 20px;
+  border: none;
 }
+
 .nav-items a {
-  text-decoration: none;
   color: unset;
+  position: relative;
+  text-decoration: none;
+  color: var(--medium-gray);
+  padding: 10px 0; /* Add vertical padding */
 }
-.nav-items .active{
-  border-bottom: 3px solid var(--medium-gray);
-}
-.nav-items a:hover {
+
+.nav-items .active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
   background-color: var(--medium-gray);
-  color: var(--white);
+  transition: width 0.2s ease-in-out;
 }
-.btn-contribute{
+
+.nav-items a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--medium-gray);
+  transition: width 0.2s ease-in-out;
+}
+
+.nav-items a:hover::before,
+.nav-items .active::before {
+  width: 100%;
+}
+
+.nav-items a:active {
+  color: var(--dark-gray);
+}
+
+.nav-items a:focus {
+  color: var(--medium-dark-gray);
+}
+
+.btn-contribute {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   border-radius: 5px;
   margin-right: 20px;
   background-color: var(--medium-gray);
-  color: var(--white);
-  border: 0;
   cursor: pointer;
+  border: 2px solid var(--medium-gray);
+  text-decoration: none;
+  color: var(--white);
+  gap: 5px;
 }
+
+.btn-contribute:hover {
+  background-color: transparent;
+  border: 2px solid var(--medium-gray);
+  color: var(--medium-gray);
+  transition: ease-in-out 0.2s;
+}
+
 .hero_section {
   width: 100vw;
   height: 80vh;
