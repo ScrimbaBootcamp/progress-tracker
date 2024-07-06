@@ -20,6 +20,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -163,4 +164,51 @@ header {
 
 .content button:hover {
   cursor: pointer;
+}
+
+/* curriculum styling */
+.curriculum-hero {
+  width: 100vw;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: var(--medium-dark-gray);
+  background-blend-mode: overlay;
+  margin-bottom: 90px;
+}
+
+.curriculum-hero-container {
+  text-align: center;
+  max-width: 50vw;
+  margin: 0 auto;
+}
+
+.curriculum-hero .content {
+  padding: 5em;
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.curriculum-container {
+  text-align: center;
+}
+
+.curriculum-container h1 {
+  font-size: 3rem;
+}
+
+.module {
+  margin: 50px 0;
+  font-size: 1.25rem;
+  color: var(--dark-gray);
+}
+
+.module h2 {
+  font-size: 2rem;
+}
+
+.module li {
+  list-style: decimal;
+  margin: 5px 0;
 }
