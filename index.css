@@ -214,10 +214,6 @@ header {
 }
 
 /* FOOTER */
-.black-border {
-  /* border: 1px solid black; */
-}
-
 .footer {
   display: flex;
   flex-direction: column;
@@ -243,7 +239,8 @@ header {
 
 .footer-statement {
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.75;
+  text-align: justify;
 }
 
 .footer-nav {
@@ -330,7 +327,6 @@ header {
   .footer-project-summary {
     flex: 0 0 25em;
     max-width: none;
-    text-align: justify;
   }
 
   .footer-nav {
