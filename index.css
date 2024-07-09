@@ -234,8 +234,6 @@ header {
   gap: 2.5em;
 
   max-width: 30em;
-
-  text-align: justify;
 }
 
 .footer-logo {
@@ -332,6 +330,7 @@ header {
   .footer-project-summary {
     flex: 0 0 25em;
     max-width: none;
+    text-align: justify;
   }
 
   .footer-nav {
