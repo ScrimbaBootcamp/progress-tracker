@@ -28,7 +28,7 @@
 
 .hero_section .hero_container {
   text-align: center;
-  max-width: 50vw;
+  max-width: 100vw;
   margin: 0 auto;
 }
 
@@ -63,3 +63,61 @@
 .content button:hover {
   cursor: pointer;
 }
+
+/* start of section two css */
+
+.section-two{
+
+  display: grid;
+  grid-template: 1fr 2fr  / 1fr 1fr;
+  gap:1rem;
+  font-family: "Roboto", sans-serif;
+  padding: 2rem;
+  color:snow;
+
+}
+
+ 
+
+ 
+.scrimba-way{
+  margin:auto;
+  grid-column: span 2;
+  color:black
+  
+}
+.learn-fast{
+  background-image:url("./assets/images/homepage/data-8380806_1280.jpg");
+  background-size: cover;
+  grid-row: span 2;
+  padding: 3rem;
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: overlay;
+
+}
+.get-help{
+  background-image:url("./assets/images/homepage/data-8380807_1280.jpg");
+  padding: 3rem;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: overlay;
+
+ 
+
+}
+.hack-first{
+background-image: url("./assets/images/homepage/digital-1742687_1280.jpg");
+padding: 3rem;
+border-radius: 20px;
+background-color: rgba(0, 0, 0, 0.2);
+background-blend-mode: overlay;
+
+
+}
+
+
+
+/* end of section two css */
+
