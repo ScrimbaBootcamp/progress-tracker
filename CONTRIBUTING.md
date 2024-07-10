@@ -85,7 +85,7 @@ Voila, your local repo is up-to-date. If any changes have been pulled, you might
 
 > **Good to know**
 >
-> The VS Code interface has a built-in terminal, which yu can access two ways:
+> The VS Code interface has a built-in terminal, which you can access two ways:
 > 
 > * with the ```Ctrl+ ` ``` shortcut
 > * on the toll bar at the top, click `Terminal`, then `New Terminal`
