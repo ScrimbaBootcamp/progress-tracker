@@ -108,7 +108,7 @@ When you fork a project, you can configure git to pull down changes from the ups
 ### Keep your branch up to date
 To ensure that we you are working with the latest changes to the upstream repository, it is advised to synchronize your fork with the upstream before getting to work. Also, because we have multiple contributors who may be working on changes simultaneously, it is possible that we will encounter merge conflicts. This happens when changes have been made on the same line(s) in the same file(s) from two or more branches. It isn't always possible to avoid this, however, you can reduce the chances of this by syncing your branch with the upstream repository before pushing your own changes upstream. To do this, first pull the changes to your branch. 
 1. In `Source control`, click on `Pull, Push`, then `Pull from...`
-2. The action bar at the top will prompt you to `pick a remote to pull the branch from`: select the `upstream` remote. If the `upstream` has multiple branches, you will be prompted to `pick a branch`: pick the `upstream/main` branch. \
+2. The action bar at the top will prompt you to `pick a remote to pull the branch from`: select the `upstream` remote. If the `upstream` has multiple branches, you will be prompted to `pick a branch`: pick the `upstream/main` branch.
 
 <img src="./assets/images/docs/vscode-gui/8-pull-from-upstream.jpg" alt="pull from upstream" width="300" height="150">
 
@@ -125,7 +125,7 @@ Voila, your local repo is up-to-date. If any changes have been pulled, you might
 
 ### Create a feature branch in VS Code GUI
 1. Ensure that you are currently on the main branch (`Checkout to > Main`)
-2. Click on `Branch`, then `Create Branch` and give it a name. \
+2. Click on `Branch`, then `Create Branch` and give it a name.
 <img src="./assets/images/docs/vscode-gui/9-create-branch.jpg" alt="create a branch" width="300" height="300">
 3. Look at the status bar at the bottom of the interface. You should have automatically been checked out to the newly-created branch. if not, use `Checkout to > [your-new-branch]` 
 <img src="./assets/images/docs/vscode-gui/10-checkout-branch.jpg" alt="checkout branch" width="200" height="300">
