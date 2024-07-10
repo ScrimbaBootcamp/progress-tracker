@@ -11,7 +11,7 @@ To contribute to an open source project, you will follow the git workflow. You w
 ## Get started
 1. Go to [the main repository](https://github.com/ScrimbaBootcamp/project-tracker).
 2. Fork the project.
-![screenshot of fork button in Github](./assets/images/docs/Fork-screenshot.png)
+<img src="./assets/images/docs/Fork-screenshot.png" alt="screenshot of fork button in Github" width="300" height="200" display="block">
 3. Under 'Owner', you should see your own GitHub account, followed by 'productivity-app'.
 4. Look at the other options. If you would like you can add a description, you can. You shouldn't need to change the branch that is being copied.
 5. Click 'Create Fork'
@@ -45,6 +45,21 @@ When you fork a project, you can configure git to pull down changes from the ups
 
 You will now be able to keep your fork synced with the upstream repository using git.
 
+## Create a feature branch
+
+When you are working on a particular feature (or fixing a bug, or refactoring something), it can be a good practice to create a named branch. This allows you to isolate your changes from the main codebase and hopefully prevent conflicts and errors.
+ If you are using the terminal, you can use these two commands:
+```
+git branch [name-of-your-feature-branch]
+git checkout [name-of-your-feature-branch]
+```
+First you are creating the branch, and then you are switching to that branch to make your changes. 
+You can accomplish the same thing in one line though, like this:\
+`git checkout -b [name-of-your-feature-branch]`
+
+You will then create changes to stage, commit, push, and have merged. Once your branch has been merged with the main repository, you can delete your feature branch from the terminal, with one line:\
+`git branch -d [name-of-your-feature-branch]`
+
 ### Keep your branch up to date
 Because we have multiple contributors who may be working on changes simultaneously, it is possible that we will encounter merge conflicts. This happens when changes have been made on the same line(s) in the same file(s) from two or more branches. It isn't always possible to avoid this, however, you can reduce the chances of this by syncing your branch with the upstream repository before pushing your own changes upstream. To do this, first pull the changes to your branch.  In the terminal, enter:\
 `git pull upstream main` \
@@ -54,9 +69,22 @@ Then you can continue in the git workflow: checkout -> add -> commit -> push -> 
 <!-- [syncing a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) -->
 ### Merge conflicts
 
-## Continue in GitHub Desktop
+## Stage, commit, and push changes that you make
+### Staging - `git add`
+The `git add` command stages adds new or changed files to the staging area. You cannot commit files without first staging them. You can commit files individually, for example:\
+`git add CONTRIBUTING.md`\
+If you have made changes in multiple files, you can stage them all at once, like this:\
+`git add .`
+### Commiting - `git commit`
+Once your files are staged, you will be able to 'commit' them. You are saving the files while also tracking the changes that you have made in your feature branch. Commits are made with a short message that describes the changes that have been made. To do this in one line, type the following in the terminal:\
+`git commit -m "added this/deleted that/fixed bug/et al"`
+### Pushing - `git push`
+Committing changes means they are saved to your local branch. To have the changes reflected on the remote branch you will need to push these changes. Using `git push` on its own only updates the corresponding branch on the remote. If you are working in a feature branch and want to update your main branch or the upstream branch with your changes, you will use one of these commands:\
+`git push -u origin [name-of-your-feature-branch]`\
+`git push -u upstream [name-of-your-feature-branch]`
+<!-- need to detail steps for creating an upstream path -->
 
-<!-- Add steps for cloning a project and adding an upstream repository -->
+## Resolving Merge Conflicts
 
 ## Continue using the VS Code GUI
 1. Open VS Code. 
@@ -92,21 +120,6 @@ Voila, your local repo is up-to-date. If any changes have been pulled, you might
 >
 > You can also run most actions via the Action bar `Ctrl+Shift+P`, then typing the action you're looking for.
 
-## Create a feature branch
-
-When you are working on a particular feature (or fixing a bug, or refactoring something), it can be a good practice to create a named branch. This allows you to isolate your changes from the main codebase and hopefully prevent conflicts and errors.
- If you are using the terminal, you can use these two commands:
-```
-git branch [name-of-your-feature-branch]
-git checkout [name-of-your-feature-branch]
-```
-First you are creating the branch, and then you are switching to that branch to make your changes. 
-You can accomplish the same thing in one line though, like this:\
-`git checkout -b [name-of-your-feature-branch]`
-
-You will then create changes to stage, commit, push, and have merged. Once your branch has been merged with the main repository, you can delete your feature branch from the terminal, with one line:\
-`git branch -d [name-of-your-feature-branch]`
-
 ### Create a feature branch in VS Code GUI
 1. Ensure that you are currently on the main branch (`Checkout to > Main`)
 2. Click on `Branch`, then `Create Branch` and give it a name.
@@ -114,20 +127,6 @@ You will then create changes to stage, commit, push, and have merged. Once your 
 3. Look at the status bar at the bottom of the interface. You should have automatically been checked out to the newly-created branch. if not, use `Checkout to > [your-new-branch]`
 ![checkout branch](./assets/images/docs/vscode-gui/10-checkout-branch.jpg)
 
-## Stage, commit, and push changes that you make
-### Staging - `git add`
-The `git add` command stages adds new or changed files to the staging area. You cannot commit files without first staging them. You can commit files individually, for example:\
-`git add CONTRIBUTING.md`\
-If you have made changes in multiple files, you can stage them all at once, like this:\
-`git add .`
-### Commiting - `git commit`
-Once your files are staged, you will be able to 'commit' them. You are saving the files while also tracking the changes that you have made in your feature branch. Commits are made with a short message that describes the changes that have been made. To do this in one line, type the following in the terminal:\
-`git commit -m "added this/deleted that/fixed bug/et al"`
-### Pushing - `git push`
-Committing changes means they are saved to your local branch. To have the changes reflected on the remote branch you will need to push these changes. Using `git push` on its own only updates the corresponding branch on the remote. If you are working in a feature branch and want to update your main branch or the upstream branch with your changes, you will use one of these commands:\
-`git push -u origin [name-of-your-feature-branch]`\
-`git push -u upstream [name-of-your-feature-branch]`
-<!-- need to detail steps for creating an upstream path -->
 
 ## Submit a pull request
 1. On GitHub, navigate to the project's [main repository](https://github.com/ScrimbaBootcamp/progress-tracker). 
@@ -142,5 +141,6 @@ Committing changes means they are saved to your local branch. To have the change
 
 5. Type a title and a description for your pull request. You can use GitHub's formatting palette or use Markdown to format as applicable.
 6. When you are finished, click 'Create Pull Request'.
+## Continue in GitHub Desktop
 
-## Resolving Merge Conflicts
+<!-- Add steps for cloning a project and adding an upstream repository -->
