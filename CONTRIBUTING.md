@@ -98,6 +98,8 @@ Committing changes means they are saved to your local branch. To have the change
 6. When you are finished, click 'Create Pull Request'.
 
 ## Resolving Merge Conflicts
+<!-- This needs documentation -->
+
 
 ## Continue using the VS Code GUI
 1. Open VS Code. 
