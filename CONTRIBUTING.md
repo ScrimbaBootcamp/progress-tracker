@@ -10,8 +10,8 @@ To contribute to an open source project, you will follow the git workflow. You w
 
 ## Get started
 1. Go to [the main repository](https://github.com/ScrimbaBootcamp/project-tracker).
-2. Fork the project.
-![screenshot of fork button in Github](./assets/images/docs/Fork-screenshot.png)
+2. Fork the project. \
+<img src="./assets/images/docs/Fork-screenshot.png" alt="screenshot of fork button in Github" width="300" height="200" display="block">
 3. Under 'Owner', you should see your own GitHub account, followed by 'productivity-app'.
 4. Look at the other options. If you would like you can add a description, you can. You shouldn't need to change the branch that is being copied.
 5. Click 'Create Fork'
@@ -45,53 +45,6 @@ When you fork a project, you can configure git to pull down changes from the ups
 
 You will now be able to keep your fork synced with the upstream repository using git.
 
-### Keep your branch up to date
-Because we have multiple contributors who may be working on changes simultaneously, it is possible that we will encounter merge conflicts. This happens when changes have been made on the same line(s) in the same file(s) from two or more branches. It isn't always possible to avoid this, however, you can reduce the chances of this by syncing your branch with the upstream repository before pushing your own changes upstream. To do this, first pull the changes to your branch.  In the terminal, enter:\
-`git pull upstream main` \
-Now, make sure that your own fork of the project is synced as well. Enter:\
-`git push origin main` \
-Then you can continue in the git workflow: checkout -> add -> commit -> push -> pull -> and so on.
-<!-- [syncing a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) -->
-### Merge conflicts
-
-## Continue in GitHub Desktop
-
-<!-- Add steps for cloning a project and adding an upstream repository -->
-
-## Continue using the VS Code GUI
-1. Open VS Code. 
-2. If you already have a project running, click File > New Window (`Ctrl+Shift+N`). Then, click on the `Source Control` icon on the left side panel (`Ctrl+Shift+G`) and click `Clone Repository`.![open-vs-code](./assets/images//docs/vscode-gui/2-open-vs-code.jpg)
-3. Paste the URL that you just copied (of your fork). Choose a folder and your local clone will be created.
-4. Click `open` (or open in new window) and your local clone will open.
-
-### Configure git to sync changes with main repo
-In VS Code, all git-related actions go through the `Source Control` interface, which you can access by clicking this button on the left side panel: ![source-control-button](./assets/images/docs/vscode-gui/4-source-control.jpg)
-
-When you fork a project, you can configure git to pull down changes from the upstream repository into the local clone of your fork in addition to submitting requests to merge changes you've made.
-
-1. In GitHub, go back to the project's [main repository](https://github.com/ScrimbaBootcamp/project-tracker), known as the `upstream`.
-2. Click on the '<> Code' button in that repo, and copy the URL.
-3. Back in VS Code, click on `Source Control`, then on the `...` button to open a menu with more actions. There, click on `Add remote`, paste the URL, name it `upstream` and hit Enter.
-![add-remote](./assets/images/docs/vscode-gui/7-add-remote.jpg)
-
-### Keep your branch up to date
-To ensure that we you are working with the latest changes to the upstream repository, it is advised to synchronize your fork with the upstream before getting to work. Also, because we have multiple contributors who may be working on changes simultaneously, it is possible that we will encounter merge conflicts. This happens when changes have been made on the same line(s) in the same file(s) from two or more branches. It isn't always possible to avoid this, however, you can reduce the chances of this by syncing your branch with the upstream repository before pushing your own changes upstream. To do this, first pull the changes to your branch. 
-1. In `Source control`, click on `Pull, Push`, then `Pull from...`
-2. The action bar at the top will prompt you to `pick a remote to pull the branch from`: select the `upstream` remote. If the `upstream` has multiple branches, you will be prompted to `pick a branch`: pick the `upstream/main` branch.
-
-![pull from upstream](./assets/images/docs/vscode-gui/8-pull-from-upstream.jpg)
-
-Voila, your local repo is up-to-date. If any changes have been pulled, you might want to push them to your own forked remote.
-
-> **Good to know**
->
-> The VS Code interface has a built-in terminal, which yu can access two ways:
-> 
-> * with the ```Ctrl+ ` ``` shortcut
-> * on the toll bar at the top, click `Terminal`, then `New Terminal`
->
-> You can also run most actions via the Action bar `Ctrl+Shift+P`, then typing the action you're looking for.
-
 ## Create a feature branch
 
 When you are working on a particular feature (or fixing a bug, or refactoring something), it can be a good practice to create a named branch. This allows you to isolate your changes from the main codebase and hopefully prevent conflicts and errors.
@@ -107,12 +60,14 @@ You can accomplish the same thing in one line though, like this:\
 You will then create changes to stage, commit, push, and have merged. Once your branch has been merged with the main repository, you can delete your feature branch from the terminal, with one line:\
 `git branch -d [name-of-your-feature-branch]`
 
-### Create a feature branch in VS Code GUI
-1. Ensure that you are currently on the main branch (`Checkout to > Main`)
-2. Click on `Branch`, then `Create Branch` and give it a name.
-![create a branch](./assets/images/docs/vscode-gui/9-create-branch.jpg)
-3. Look at the status bar at the bottom of the interface. You should have automatically been checked out to the newly-created branch. if not, use `Checkout to > [your-new-branch]`
-![checkout branch](./assets/images/docs/vscode-gui/10-checkout-branch.jpg)
+### Keep your branch up to date
+Because we have multiple contributors who may be working on changes simultaneously, it is possible that we will encounter merge conflicts. This happens when changes have been made on the same line(s) in the same file(s) from two or more branches. It isn't always possible to avoid this, however, you can reduce the chances of this by syncing your branch with the upstream repository before pushing your own changes upstream. To do this, first pull the changes to your branch.  In the terminal, enter:\
+`git pull upstream main` \
+Now, make sure that your own fork of the project is synced as well. Enter:\
+`git push origin main` \
+Then you can continue in the git workflow: checkout -> add -> commit -> push -> pull -> and so on.
+<!-- [syncing a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) -->
+### Merge conflicts
 
 ## Stage, commit, and push changes that you make
 ### Staging - `git add`
@@ -129,18 +84,65 @@ Committing changes means they are saved to your local branch. To have the change
 `git push -u upstream [name-of-your-feature-branch]`
 <!-- need to detail steps for creating an upstream path -->
 
+## Resolving Merge Conflicts
+
+## Continue using the VS Code GUI
+1. Open VS Code. 
+2. If you already have a project running, click File > New Window (`Ctrl+Shift+N`). Then, click on the `Source Control` icon on the left side panel (`Ctrl+Shift+G`) and click `Clone Repository`.
+<img src="./assets/images//docs/vscode-gui/2-open-vs-code.jpg" alt="open-vs-code" width="300" height="200">
+3. Paste the URL that you just copied (of your fork). Choose a folder and your local clone will be created.
+4. Click `open` (or open in new window) and your local clone will open.
+
+### Configure git to sync changes with main repo
+In VS Code, all git-related actions go through the `Source Control` interface, which you can access by clicking this button on the left side panel: \
+<img src="./assets/images/docs/vscode-gui/4-source-control.jpg" alt="source-control-button" width="300" height="200">
+
+When you fork a project, you can configure git to pull down changes from the upstream repository into the local clone of your fork in addition to submitting requests to merge changes you've made.
+
+1. In GitHub, go back to the project's [main repository](https://github.com/ScrimbaBootcamp/project-tracker), known as the `upstream`.
+2. Click on the '<> Code' button in that repo, and copy the URL.
+3. Back in VS Code, click on `Source Control`, then on the `...` button to open a menu with more actions. There, click on `Add remote`, paste the URL, name it `upstream` and hit Enter. \
+<img src="./assets/images/docs/vscode-gui/7-add-remote.jpg" alt="add-remote" width="300" height="200">
+
+### Keep your branch up to date
+To ensure that we you are working with the latest changes to the upstream repository, it is advised to synchronize your fork with the upstream before getting to work. Also, because we have multiple contributors who may be working on changes simultaneously, it is possible that we will encounter merge conflicts. This happens when changes have been made on the same line(s) in the same file(s) from two or more branches. It isn't always possible to avoid this, however, you can reduce the chances of this by syncing your branch with the upstream repository before pushing your own changes upstream. To do this, first pull the changes to your branch. 
+1. In `Source control`, click on `Pull, Push`, then `Pull from...`
+2. The action bar at the top will prompt you to `pick a remote to pull the branch from`: select the `upstream` remote. If the `upstream` has multiple branches, you will be prompted to `pick a branch`: pick the `upstream/main` branch. \
+
+<img src="./assets/images/docs/vscode-gui/8-pull-from-upstream.jpg" alt="pull from upstream" width="300" height="200">
+
+Voila, your local repo is up-to-date. If any changes have been pulled, you might want to push them to your own forked remote.
+
+> **Good to know**
+>
+> The VS Code interface has a built-in terminal, which you can access two ways:
+> 
+> * with the ```Ctrl+ ` ``` shortcut
+> * on the toll bar at the top, click `Terminal`, then `New Terminal`
+>
+> You can also run most actions via the Action bar `Ctrl+Shift+P`, then typing the action you're looking for.
+
+### Create a feature branch in VS Code GUI
+1. Ensure that you are currently on the main branch (`Checkout to > Main`)
+2. Click on `Branch`, then `Create Branch` and give it a name. \
+<img src="./assets/images/docs/vscode-gui/9-create-branch.jpg" alt="create a branch" width="300" height="200">
+3. Look at the status bar at the bottom of the interface. You should have automatically been checked out to the newly-created branch. if not, use `Checkout to > [your-new-branch]` \
+<img src="./assets/images/docs/vscode-gui/10-checkout-branch.jpg" alt="checkout branch" width="300" height="200">
+
+
 ## Submit a pull request
 1. On GitHub, navigate to the project's [main repository](https://github.com/ScrimbaBootcamp/progress-tracker). 
-2. Above the list of files, you will see a banner with a 'Compare & Pull Request' button. Click that to create a pull request for your feature branch.\
+2. Above the list of files, you will see a banner with a 'Compare & Pull Request' button. Click that to create a pull request for your feature branch. \
 
-![Screen Shot 2024-06-10 at 12 25 14 PM](https://github.com/ScrimbaBootcamp/progress-tracker/assets/89760083/2ab7fb21-e478-459f-be5e-e8d7560b8821)
+<img src="https://github.com/ScrimbaBootcamp/progress-tracker/assets/89760083/2ab7fb21-e478-459f-be5e-e8d7560b8821" alt="Screen Shot 2024-06-10 at 12 25 14 PM" width="300" height="200">
 
 3. On the page to create a new pull request, click `compare across forks'.
-4. On the next page, verify the base repository and head repository. The base repository will likely be `ScrimbaBootcamp/progress-tracker, base:main`, and the head repository should be `ScrimbaBootcamp/progress-tracker, base:[feature-branch]`. These are both drop-down menus if you need to change something.
+4. On the next page, verify the base repository and head repository. The base repository will likely be `ScrimbaBootcamp/progress-tracker, base:main`, and the head repository should be `ScrimbaBootcamp/progress-tracker, base:[feature-branch]`. These are both drop-down menus if you need to change something. \
 
-![Screen Shot 2024-06-10 at 12 25 52 PM](https://github.com/ScrimbaBootcamp/progress-tracker/assets/89760083/23b2ba5a-4b92-4d68-a74f-7cc8367a17b0)
+<img src="https://github.com/ScrimbaBootcamp/progress-tracker/assets/89760083/23b2ba5a-4b92-4d68-a74f-7cc8367a17b0" alt="Screen Shot 2024-06-10 at 12 25 52 PM" width="300" height="200">
 
 5. Type a title and a description for your pull request. You can use GitHub's formatting palette or use Markdown to format as applicable.
 6. When you are finished, click 'Create Pull Request'.
+## Continue in GitHub Desktop
 
-## Resolving Merge Conflicts
+<!-- Add steps for cloning a project and adding an upstream repository -->
