@@ -1,4 +1,5 @@
 # Scrimba Bootcamp Progress Tracker
+Bootcamp students will contribute to this open source project, where we will build an app to keep track of activity and accomplishments in the Scrimba bootcamp.
 
 ## Summary
 Welcome! This open source project is for Scrimba Bootcamp students to get experience working with other developers, becoming familiar with the git workflow, and learning best practices for collaborative projects. Right now we will not be assigning issues or accepting pull requests from anyone other than our students. To learn more about the Scrimba Bootcamp, please visit https://v1.scrimba.com/bootcamp.
@@ -16,6 +17,7 @@ x
 
 <!-- bootcamp-progress-tracker.netlify.app -->
 <!-- Here is some important information that should be included in a README for an open source project:
+
 
 - [x] Project title and summary
 - [ ] brief instructions on how to set up the project
