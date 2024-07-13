@@ -303,6 +303,11 @@ header {
   font-weight: 600;
 }
 
+.repo-link:hover {
+  background-color: var(--medium-dark-gray);
+  text-decoration: none;
+}
+
 @media only screen and (min-width: 552px) {
   .footer {
     padding: 5em;
