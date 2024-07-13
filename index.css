@@ -286,28 +286,9 @@ header {
   text-decoration: underline;
 }
 
-.repo-link,
-.repo-link:visited {
-  background-color: var(--medium-gray);
-  border-radius: 0.3125em;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: .625em;
-  gap: .3125em;
-
-  color: var(--white);
-  border: 0.125em solid transparent; /* required for spacing consistency */
-}
-
-.repo-link:hover {
-  background-color: transparent;
-  color: var(--medium-gray);
-  border-color: var(--medium-gray);
-  transition: ease-in-out 0.2s;
-  text-decoration: none;
+.repo-link {
+  margin-right: 0;
 }
 
 @media only screen and (min-width: 552px) {
