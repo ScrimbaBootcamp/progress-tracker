@@ -27,5 +27,11 @@
     linkedIn: '',
     gitHub: 'https://github.com/paulaFenner',
     avatar: "url('./assets/images/contributors/paula-avatar.jpeg')",
-  },
+  }, 
+  {
+    name: 'Sam Craig',
+    linkedIn: 'https://www.linkedin.com/in/sam-craig-059834252/',
+    gitHub: 'https://github.com/Samcraig77',
+    avatar: "url('.assets/images/contributors/Sam-avatar.jpg')"
+},
 ];
