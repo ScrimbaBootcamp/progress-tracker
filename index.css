@@ -228,7 +228,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 2.5em;
+  gap: 1.5em;
 
   max-width: 30em;
 }
@@ -241,7 +241,6 @@ header {
 .footer-statement {
   font-weight: 300;
   line-height: 1.75;
-  text-align: justify;
 }
 
 .footer-nav {
@@ -290,21 +289,24 @@ header {
 .repo-link,
 .repo-link:visited {
   background-color: var(--medium-gray);
-  border-radius: .25em;
+  border-radius: 0.3125em;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: .8125em 1em;
-  gap: .625em;
+  padding: .625em;
+  gap: .3125em;
 
-  color: white;
-  font-weight: 600;
+  color: var(--white);
+  border: 0.125em solid transparent; /* required for spacing consistency */
 }
 
 .repo-link:hover {
-  background-color: var(--medium-dark-gray);
+  background-color: transparent;
+  color: var(--medium-gray);
+  border-color: var(--medium-gray);
+  transition: ease-in-out 0.2s;
   text-decoration: none;
 }
 
@@ -312,6 +314,7 @@ header {
   .footer {
     padding: 5em;
   }
+  
   .footer-nav {
     flex-direction: row;
     justify-content: space-between;
@@ -333,6 +336,7 @@ header {
   .footer-project-summary {
     flex: 0 0 25em;
     max-width: none;
+    gap: 2.5em;
   }
 
   .footer-nav {
