@@ -1,4 +1,4 @@
-[
+const contributors = [
   {
     name: 'Micha',
     linkedIn: 'https://linkedin.com/in/michaella-rodriguez',
@@ -35,3 +35,25 @@
     avatar: "url('.assets/images/contributors/Sam-avatar.jpg')"
 },
 ];
+
+const contributorSection = document.getElementById("contributors-section")
+
+function renderContributors() {
+for (i = 0; i < 0; i++) {
+
+}
+}
+
+function createContributorSlide(array) {
+
+array = Object.values 
+
+contributorSection.innerHTML += `
+<section class="contributor-slide">
+<h2>${contributors.name}</h2>
+<img src="${contributors.avatar}" alt="">
+<i class="linkedIn-icon" href="${contributors.linkedIn}">LinkedIn</a>
+<i class="gitHub-icon" href="${contributors.gitHub}">Github</a>
+ 
+</section>`
+}
