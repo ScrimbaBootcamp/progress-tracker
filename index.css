@@ -270,7 +270,13 @@ background-color: red;
   padding: 2rem;
 }
 
-
+@media screen and (max-width:600px){
+  .card {
+  grid-column: 1;
+ 
+  
+  }
+  }
 
 /* end of section two */
 
@@ -389,3 +395,4 @@ background-color: red;
     justify-content: space-between;
   }
 }
+
