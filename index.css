@@ -271,10 +271,13 @@ background-color: red;
 }
 
 @media screen and (max-width:600px){
-  .card {
-  grid-column: 1;
- 
-  
+  .grid-contaier{
+  grid-template: 1fr / 1fr;
+   gap:0;
+  }
+  .card{
+    grid-column: 1;
+    margin-bottom: 1em ;
   }
   }
 
