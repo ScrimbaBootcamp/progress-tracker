@@ -308,8 +308,10 @@ background-color: var(--white);
   border: 2px solid var(--medium-gray);
 }
 
-.contributor-card img{
+.contributor-card .img-container{
   height: 40vh; 
+  width: 30vw;
+  background-size: cover;
 }
 
 .contributor-card .social-links {
