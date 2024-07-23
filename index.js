@@ -3,17 +3,18 @@ import { contributorsArray } from "./assets/data/contributors.js"
 const contributorSection = document.getElementById("contributors-main-section")
 
 
-function renderContributors(){
+function getContributors() {
+    let contributors = ''
 
-    for (let contributor of contributorsArray){
-        
-        
+    contributorsArray.forEach(function (contributor) {
 
-         contributorSection.innerHTML += `
+        contributors += `
             <article class="contributor-card">
             <h2>${contributor.name}</h2>
             <br>
+            <div class="img-container">
             <img src="${contributor.avatar}">
+            </div>
             <br>
             <h2>Find this contributor on:</h2>
             <div class="social-links">
@@ -27,11 +28,17 @@ function renderContributors(){
                 </a>
             </div>
             </article>
-            `
-            contributorSection.style.backgroundImage = `${contributor.avatar}`
-            
-    }
-    
+            `;
+            document.getElementsByClassName("contributor-card img-container").style.ba
+    })
+
+    return contributors
+}
+
+function renderContributors() {
+    contributorSection.innerHTML = getContributors()
 }
 
 renderContributors()
+
+console.log(getContributors())
