@@ -216,7 +216,7 @@ header {
 
 /* star of section two */
 
-.grid-contaier{
+.grid-container{
   display: grid;
   grid-template: 1fr / 1fr 1fr;
   gap:1rem;
@@ -271,7 +271,7 @@ background-color: red;
 }
 
 @media screen and (max-width:600px){
-  .grid-contaier{
+  .grid-container{
   grid-template: 1fr / 1fr;
    gap:0;
   }
@@ -284,22 +284,57 @@ background-color: red;
 /* end of section two */
 
 
+/* Contributors page styling */
+
+.contributors-body {
+  background-color: var(--white);
+}
+
+.contributors-main-section {
+display: grid;
+grid-template-columns: auto auto auto;
+margin: auto;
+gap: 2vw;
+margin: 1vw;
+background-color: var(--white);
+}
+
+.contributors-page .hero-section {
+  margin: 10px;
+  font-size: 2rem;
+}
+
+.contributor-card {
+  border: 2px solid var(--medium-gray);
+}
+
+.contributor-card img{
+  height: 40vh; 
+}
+
+.contributor-card .social-links {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+
 /* FOOTER */
 .footer {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 4em;
-
   padding: 5em 2em;
 }
+
 
 .footer-project-summary {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 1.5em;
-
   max-width: 30em;
 }
 
@@ -321,7 +356,6 @@ background-color: red;
 
 .footer-list {
   list-style: none;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
