@@ -10,28 +10,36 @@
     <!-- Icon library fontawesome link -->
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
     <link rel="stylesheet" href="index.css" />
+    
 
     <title>Progress Tracker</title>
   </head>
   <body>
     <!-- header goes here -->
-     <header>
+    <header>
       <div class="logo">
-          <img src="/assets/images/homepage/Progress_tracker_logo.png" alt="Logo Here" aria-label="This is the logo image">
+        <img src="/assets/images/homepage/Progress_tracker_logo.png" alt="Logo Here" aria-label="This is the logo image">
       </div>
-      <div class="nav">
-          <ul class="nav-menu">
-            <li class="nav-items"><a href="index.html" class="active">Home</a></li>
-            <li class="nav-items"><a href="/html/curriculum.html">Curriculum</a></li>
-            <li class="nav-items"><a href="/html/activities.html">Activities</a></li>
-            <li class="nav-items"><a href="/html/contributors.html">Contributors</a></li>
-            <li class="">
-              <a href="https://github.com/ScrimbaBootcamp/progress-tracker/" class="btn-contribute">
-              <i class="fa-brands fa-github"></i> Contribute!</a></li>
-          </ul>
-          <!-- <button class="btn-contribute">Contribute!</button> -->
-      </div>
-     </header>
+      <nav class="nav">
+        <ul class="nav-menu">
+          <li class="nav-items"><a href="index.html" class="active">Home</a></li>
+          <li class="nav-items"><a href="/html/curriculum.html">Curriculum</a></li>
+          <li class="nav-items"><a href="/html/activities.html">Activities</a></li>
+          <li class="nav-items"><a href="/html/contributors.html">Contributors</a></li>
+          <li class="nav-items">
+            <a href="https://github.com/ScrimbaBootcamp/progress-tracker/" class="btn-contribute">
+              <i class="fa-brands fa-github"></i> Contribute!
+            </a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    
     <section class="hero_section">
       <div class="hero_container">
         <div class="content">
@@ -104,5 +112,6 @@
         </ul>
       </section>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>
