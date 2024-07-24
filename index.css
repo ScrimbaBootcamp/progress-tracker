@@ -292,7 +292,7 @@ background-color: red;
 
 .contributors-main-section {
 display: grid;
-grid-template-columns: auto auto auto;
+grid-template-columns: 1fr 1fr 1fr;
 margin: auto;
 gap: 2vw;
 margin: 1vw;
@@ -302,16 +302,22 @@ background-color: var(--white);
 .contributors-page .hero-section {
   margin: 10px;
   font-size: 2rem;
+  text-align: center;
 }
 
 .contributor-card {
   border: 2px solid var(--medium-gray);
+  border-radius: 8px;
+  text-align: center;
 }
 
-.contributor-card .img-container{
-  height: 40vh; 
+.img-container {
+  height: 33vh; 
   width: 30vw;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-image: url('./assets/images/contributors/paula-avatar.jpeg'); */
 }
 
 .contributor-card .social-links {
@@ -319,8 +325,16 @@ background-color: var(--white);
   display: flex;
   align-items: center;
   gap: 1vw;
+  
 }
 
+.contributor-card .social-links i {
+  color: var(--light-gray)
+}
+
+.contributor-card .social-links i:hover {
+  color: var(--dark-gray);
+}
 
 /* FOOTER */
 .footer {

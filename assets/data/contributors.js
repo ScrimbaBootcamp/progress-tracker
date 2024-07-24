@@ -3,7 +3,7 @@ export const contributorsArray = [
     name: 'Sam Craig',
     linkedIn: 'https://www.linkedin.com/in/sam-craig-059834252/',
     gitHub: 'https://github.com/Samcraig77',
-    avatar: "url('.assets/images/contributors/Sam-avatar.jpg')",
+    avatar: "url('./assets/images/contributors/Sam-avatar.jpg')",
     alt: 'Sam looking at the camera, with an out of focus tree in the background.'
   },
   {
@@ -22,7 +22,7 @@ export const contributorsArray = [
   },
   {
     name: 'Fadumo Ahmed',
-    linkedIn: '#',
+    linkedIn: '',
     gitHub: 'https://github.com/fame372',
     avatar: "url('./assets/images/contributors/fadumo-avator-photo.jpeg')",
     alt: 'Fadumo wearing a long pink shirt, looking into the distance on a beach.'
