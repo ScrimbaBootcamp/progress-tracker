@@ -8,7 +8,7 @@ To contribute to an open source project, you will follow the git workflow. You w
 4. If you see code that was written by another contributor that you feel could be improved, you might wish to tag them in the issue that you create so that you can discuss potential changes and decide who will work on this issue. One or both of you may then request assignment to the issue.
 5. Once you have been assigned to an issue, you can follow the protocol below.
 
-## Get started
+## Get started (if you are using GitHub Desktop please skip to <a href="#desktop">those directions</a>)
 1. Go to [the main repository](https://github.com/ScrimbaBootcamp/project-tracker).
 2. Fork the project.
 <img src="./assets/images/docs/Fork-screenshot.png" alt="screenshot of fork button in Github" width="500" height="350">
@@ -145,7 +145,6 @@ Voila, your local repo is up-to-date. If any changes have been pulled, you might
 3. Look at the status bar at the bottom of the interface. You should have automatically been checked out to the newly-created branch. if not, use `Checkout to > [your-new-branch]` 
 <img src="./assets/images/docs/vscode-gui/10-checkout-branch.jpg" alt="checkout branch" width="400" height="600">
 
-
-## Continue in GitHub Desktop
-
 <!-- Add steps for cloning a project and adding an upstream repository -->
+## <span id="desktop">Continue in GitHub Desktop </span>
+
