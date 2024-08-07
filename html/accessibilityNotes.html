@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/index.css" />
+    <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+    <title>Accessibility Notes</title>
+</head>
+<body>
+    <header>
+        <h2>Accessibility</h2>
+    </header>
+    <main>
+        <div class="accordion first-accordion">
+            <h3 class="accordion-name">Notes<span class="accordion-arrow first-arrow"></span></h3>
+            <ul class="inner-accordion-content" style="display: block;">
+                <li class="sub-list"><span>Web Accessibility</span>
+                    <ul>
+                        <li>Web accessiblity means that websites, tools, and technologies are designed and developed so that people with disabiliies can use them. More specifically, people can perceive, 
+                            understand, navigate, and interact with the web and contribute to the web.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Guiding Prinicples of web accessiblity POUR</span>
+                    <ul>
+                        <li>P - Perceivalbe - either by seeing or hearing, text alternatives.</li>
+                        <li>O - Operable - Keyboard accessiblity, navigatble, enough time to read and use content.</li>
+                        <li>U - Understandable - readable, predictable, opportun ity for user to correct mistakes.</li>
+                        <li>R - Robust -  be used with different browsers and assistive technologies.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Accessiblility goes beyond disability</span>
+                    <ul>
+                        <li>People using mobile phones, smart watches,rt TVs, and other devices with small screens, different input modules, etc.</li>
+                        <li>Older people with changing abilities due to aging.</li>
+                        <li>people with temporary disabilities such as a broken arm or lost glasses.</li>
+                        <li>People with situational limits such as in bright sunlight or in an environment where they cannot listen to audio.</li>
+                        <li>People using a slow internet connection,or who have limited or expensive bandwidth.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>How to make accessible websites</span>
+                    <ul>
+                        <li>Semantic HTML, <blockcode>&lt;header&gt;</blockcode>, <blockcode>&lt;nav&gt;</blockcode>, <blockcode>&lt;main&gt;</blockcode>, <blockcode>&lt;footer&gt;</blockcode>
+                            <blockcode>&lt;section&gt;</blockcode>, <blockcode>&lt;article&gt;</blockcode>, <blockcode>&lt;form&gt;</blockcode>, <blockcode>&lt;input&gt;</blockcode>s, with 
+                            <blockcode>&lt;label&gt;</blockcode>s, heading levels, aria, alt attributes.
+                        </li>
+                        <li>You can also use CSS to create accessible styles. Font sizes (responsive units), font families, color contrast, sizing touch targets, line spacing and letter spacing, hover/focus/active.visited states, 
+                            hiding elements in an accessible way, using animations thoughtfully, ect.</li>
+                        <li>Some semantic HTML will have default styles that affect the appearance of your page, others have no style at all but serve as landmarks for content that are recognizable to all users.</li>
+                        <li>Use a <blockcode>&lt;button&gt;</blockcode> for an internal link or action, and <blockcode>&lt;a&gt;</blockcode> to go to an external location, a new page, or a new landmark on the page.</li>
+                        <li class="sub-list"><span>Acessiblity Starter Checklist</span>
+                            <ul>
+                                <li>POUR - Perceivable? Operable? Understandable? Robust?</li>
+                                <li>Semantic HTML</li>
+                                <li>Landmark elements</li>
+                                <li>Heading tags build skeleton of the page.</li>
+                                <li>Do images have alt text?</li>
+                                <li>Are buttons and other custom elements interactive?</li>
+                                <li>Color and contrast</li>
+                                <li>Focusable styles</li>
+                                <li>Can you tab trhough the page? (tab index) (tab to go to the next, shft + tab to go back)</li>
+                                <li>Do you have access to all the same information on the page with a screen reader?</li>
+                            </ul>
+                        </li>
+                        <li class="sub-list"><span>Accessibility lvl2 Checklist</span>
+                            <ul>
+                                <li><a href="https://www.w3schools.com/accessibility/accessibility_skip_links.php" target="_blank" alt="Accessibility Skip Links">Skip Link</a>, if there are lots of navigation menus (sr-only class - code snippet)</li>
+                                <li>Can you focus on off-screan content? This will trip the keyboard users and scren-readers.</li>
+                                <li>Test with one type of screen reader.</li>
+                            </ul>
+                        </li>
+                        <li class="sub-list"><span>Aria Properties</span>
+                            <ul>
+                                <li>WAI-ARIA can come in handy when your working in someone elses codebase.</li>
+                                <li>aria-label</li>
+                                <li>aria-live, boolean</li>
+                                <li>aria-labelledby</li>
+                                <li>aria-required</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <script type="module" src="/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/index.css" />
+    <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+    <title>Firebase Notes</title>
+</head>
+<body>
+    <header>
+        <h2>Firebase</h2>
+        <ul>
+            <li>Database</li>
+            <li>Updates in Real Time</li>
+            <li>Easy to Use</li>
+        </ul>
+    </header>
+    <main>
+        <div class="accordion">
+            <h3 class="accordion-name">Notes<span class="accordion-arrow first-arrow"></span></h3>
+            <ul class="inner-accordion-content" style="display: block;">
+                <li>Script tags in HTML are where you can write JS. add src="filename" to link js file to HTML file.</li>
+                <li>const: appSettings = {databaseURL: "referenceURL"}</li>
+                <li>import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"</li>
+                <li>const app = initializeApp(appSettings)</li>
+                <li>import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"</li>
+                <li>const database = getDatabase(app)</li>
+                <li>const name = ref(database, "what the reference should be called")</li>
+                <li>push(where you want to push it (name), what you want to push)</li>
+                <li class="sub-list">Security Rules
+                    <ul>
+                        <li>using test mode allows anyone with the database reference to view edit and delete the data in your database.</li>
+                        <li>the default for testmode is set to a max of 30 days. (how long test mode lasts)</li>
+                        <li>to change the max testmode write and read time go to Realtime Database then Rules. If you change them both to true
+                            anyone will always be able to read or write in the database.
+                        </li>
+                    </ul>
+                </li>
+                <li>To create a section press the plus next to the url and add a key, then press the plus next to your section name.</li>
+                <li>import { onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"</li>
+                <li>onValue(where you want to fetch the data from (name), function(snapshot){})</li>
+                <li>onValue runs every time there's a change to the database.</li>
+                <li>to change a key or value in the database just click it and edit it.</li>
+                <li>inmport { remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"</li>
+            </ul>
+        </div>
+        <div class="accordion">
+            <h3 class="accordion-name">Resources<span class="accordion-arrow"></span></h3>
+            <dl class="inner-accordion-content">
+                <dt><a href="https://console.firebase.google.com/" target="_blank" alt="firebase console">Firebase</a></a></dt>
+                <dd>Database</dd>
+                <dt><a href="https://www.epochconverter.com/" target="_blank" alt="epoch converter converts to real time">Epoch Converter</a></dt>
+                <dd>converts unix epoch time to real time</dd>
+            </dl>
+        </div>
+        <div class="accordion">
+            <h3 class="accordion-name">Definitions<span class="accordion-arrow"></span></h3>
+            <dl class="inner-accordion-content">
+                <dt>Reference</dt>
+                <dd>Any location inside the database</dd>
+            </dl>
+        </div>
+        <div class="accordion">
+            <h3 class="accordion-name">Questions<span class="accordion-arrow"></span></h3>
+            <ul class="inner-accordion-content">
+                <li>Is innerHTML bad to use?</li>
+                <li>How come you don't have to import snapshot? or define it?</li>
+                <li>let arrayName = Object.values(snapshot.val())</li>
+            </ul>
+        </div>
+        </section>
+        <section id="code-review-section" hidden>
+        <h2>Code Reviews</h2>
+        <ul>
+            <li>Humans make mistakes</li>
+            <li>We need feedback at every level</li>
+        </ul>
+        <div class="accordion">
+            <h3 class="accordion-name">Notes<span class="accordion-arrow first-arrow"></span></h3>
+            <ul class="inner-accordion-content" style="display: block;">
+                <li>Great to give feedback because explaining something helps you learn it.
+                    <ul class="sub-list">
+                        <li>gain experience reading ccoe</li>
+                        <li>see dif solutions to same problem</li>
+                        <li>Learn to talk about code</li>
+                        <li>Share Knowledge</li>
+                        <li>Find and fix bugs</li>
+                        <li>show best practices</li>
+                        <li>Learn something new</li>
+                    </ul>
+                </li>
+                <li>How to get started
+                    <ol class="sub-list">
+                        <li>First Glance at the app (design and functionality)</li>
+                        <li>Get an overview of the code (what's happening, any obvious findings (structure, indentation, comments, etc.))</li>
+                        <li>Read through the code (Do you understand the codes job (if not: is it unfamiliar to you, is it poorly written))</li>
+                        <li>Take Notes (code comments, note file, paper, notes are meant to be private)</li>
+                    </ol>
+                </li>
+                <li>Structure your Review
+                    <ul class="sub-list">
+                        <li>Highlight the good stuff!</li>
+                        <li>Suggest Improvements. Walk through solutions step by step. Find a nice balance, too much is overwhelming.</li>
+                        <li>Sometimes explain concepts that are unfamiliar to the person. (naming conventions, heading hierarchy, data attributes,
+                            how to refactor code, writing DRYer code) - only if they're ready and it isn't too much!!!
+                        </li>
+                    </ul>
+                </li>
+                <li>What to look for (not everything)
+                    <ul class="sub-list">
+                        <li>Doctype and lang attribute</li>
+                        <li>Semantic HTML (header, footer, main, section, article) - is there div soup</li>
+                        <li>Meaningful names (classes, variables, functions, components, files, ect.)</li>
+                        <li>Structure of files and code (is it easy to find what you're looking for?)</li>
+                        <li>Indentation and Spacing</li>
+                        <li>Repetition (the DRY principle)</li>
+                        <li>Design (Figma design specs, do you like it if they have their own twist, responsiveness, etc.).</li>
+                        <li>Common Conventions (classes VS ids, const VS let, camelCase vs cobbob-case)</li>
+                        <li>Accessibility
+                            <ul class="sub-sub-list">
+                                <li>Navigation: keyboard navigation, size and spacing on clickable elements, unambiguous link/button texts.</li>
+                                <li>Styling: color contrasts, hover/focus style.</li>
+                                <li>AT (assistive technology): alt text, labels, heading hierarchy, visually hidden elements.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Record Review
+                    <ul>
+                        <li>click start recording</li>
+                        <li>choose microphone</li>
+                        <li>runs as long as you want</li>
+                        <li>edit Review</li>
+                        <li>publish review</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="accordion">
+            <h3 class="accordion-name">Resources<span class="accordion-arrow"></span></h3>
+            <dl class="inner-accordion-content">
+                <dt></dt>
+                <dd></dd>
+            </dl>
+        </div>
+        <div class="accordion">
+            <h3 class="accordion-name">Definitions<span class="accordion-arrow"></span></h3>
+            <dl class="inner-accordion-content">
+                <dt></dt>
+                <dd></dd>
+            </dl>
+        </div>
+        <div class="accordion">
+            <h3 class="accordion-name">Questions<span class="accordion-arrow"></span></h3>
+            <ul class="inner-accordion-content">
+                <li></li>
+            </ul>
+        </div>
+    </main>
+    <script type="module" src="/index.js"></script>
+</body>
+</html>
