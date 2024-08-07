@@ -63,8 +63,16 @@
 
 .nav-items a {
   text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
   color: #333;
   font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-items a:hover {
+  background-color: #007bff;
+  color: #fff;
 }
 
 .btn-contribute {
@@ -130,7 +138,6 @@
     transform: translateY(-8px) rotate(-45deg);
   }
 }
-
 
 .hero_section {
   width: 100vw;
@@ -229,73 +236,67 @@
 
 /* star of section two */
 
-.grid-container{
+.grid-container {
   display: grid;
   grid-template: 1fr / 1fr 1fr;
-  gap:1rem;
+  gap: 1rem;
   width: 100%;
-  color:white;
+  color: white;
   padding: 0 2rem;
-  
 }
 
-article{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.scrimba-way{
+.scrimba-way {
   grid-column: span 2;
   margin-top: 10px;
-  color:black;
+  color: black;
   font-size: 1rem;
   align-items: center;
   padding-top: 2em;
-
 }
 
-.learn-faster{
+.learn-faster {
   grid-row: span 2;
   border-radius: 15px;
- flex-shrink: 0;
- background-image: url('./assets/images/homepage/data-8380806_1280.jpg');
-
-
+  flex-shrink: 0;
+  background-image: url("./assets/images/homepage/data-8380806_1280.jpg");
 }
-.get-help, .hack-your-way{
-flex-shrink: 0;
-border-radius: 15px;
-background-color: red;
+.get-help,
+.hack-your-way {
+  flex-shrink: 0;
+  border-radius: 15px;
+  background-color: red;
 }
-.get-help{
-  background-image: url('./assets/images/homepage/data-8380807_1280.jpg');
-
+.get-help {
+  background-image: url("./assets/images/homepage/data-8380807_1280.jpg");
 }
 
-.hack-your-way{
-  background-image: url('./assets/images/homepage/digital-1742687_1280.jpg');
+.hack-your-way {
+  background-image: url("./assets/images/homepage/digital-1742687_1280.jpg");
 }
-.card{
+.card {
   background-color: rgba(0, 0, 0, 0.7);
-  size:cover;
+  size: cover;
   padding: 2rem;
 }
 
-@media screen and (max-width:600px){
-  .grid-container{
-  grid-template: 1fr / 1fr;
-   gap:0;
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template: 1fr / 1fr;
+    gap: 0;
   }
-  .card{
+  .card {
     grid-column: 1;
-    margin-bottom: 1em ;
+    margin-bottom: 1em;
   }
-  }
+}
 
 /* end of section two */
-
 
 /*Start of contributor page styling */
 
@@ -304,10 +305,10 @@ background-color: red;
 }
 
 .contributors-main-section {
-display: grid;
-grid-template-columns: auto auto auto;
-grid-template-rows: auto;
-gap: 2vw;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  gap: 2vw;
 }
 
 .contributors-page .hero-section {
@@ -320,7 +321,6 @@ gap: 2vw;
   border: 2px solid var(--medium-gray);
   border-radius: 8px;
   text-align: center;
-  
 }
 
 .contributor-avatar {
@@ -336,7 +336,7 @@ gap: 2vw;
 }
 
 .contributor-card .social-links i {
-  color: var(--light-gray)
+  color: var(--light-gray);
 }
 
 .contributor-card .social-links i:hover {
@@ -362,7 +362,6 @@ gap: 2vw;
   gap: 4em;
   padding: 5em 2em;
 }
-
 
 .footer-project-summary {
   display: flex;
@@ -408,14 +407,14 @@ gap: 2vw;
   position: absolute;
   top: 2.25em;
   left: 0;
-  border-bottom: .25em solid var(--medium-gray);
+  border-bottom: 0.25em solid var(--medium-gray);
 }
 
 .footer-link,
 .footer-link:visited {
   display: block;
 
-  color: #1A1A1A;
+  color: #1a1a1a;
   text-decoration: none;
   line-height: 1.2;
 }
@@ -423,7 +422,6 @@ gap: 2vw;
 .footer-link:hover {
   text-decoration: underline;
 }
-
 
 .repo-link {
   margin-right: 0;
@@ -433,7 +431,7 @@ gap: 2vw;
   .footer {
     padding: 5em;
   }
-  
+
   .footer-nav {
     flex-direction: row;
     justify-content: space-between;
@@ -466,4 +464,3 @@ gap: 2vw;
     justify-content: space-between;
   }
 }
-
