@@ -1,0 +1,1288 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/index.css" />
+    <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+    <title>Javascript Notes</title>
+</head>
+<body>
+    <header>
+        <h2>JavaScript</h2>
+        <ul>
+            <li>Conditionals</li>
+            <li>Loops</li>
+            <li>Functions</li>
+            <li>Fetch</li>
+        </ul>
+    </header>
+    <main>
+        <div class="accordion first-accordion">
+            <h3 class="accordion-name">Notes<span class="accordion-arrow first-arrow"></span></h3>
+            <ul class="inner-accordion-content" style="display: block;">
+                <li>Script tags in HTML are where you can write JS. add <blockcode>src="filename"</blockcode> to link js file to HTML file.</li>
+                <li><blockcode>console.log()</blockcode> to log to console</li>
+                <li>JS reads top to bottom. Can't access things before they're initialized.</li>
+                <li><blockcode>function functionName() {}</blockcode></li>
+                <li>Function is command.</li>
+                <li>Run is call or invoke.</li>
+                <li><blockcode>++</blockcode> is self plus one</li>
+                <li><blockcode>innerText</blockcode> gets/sets the text inside the element called. Can't read spaces.</li>
+                <li>When it's a string VS a number the string always wins.</li>
+                <li>You can use an escape character (/) to display a " in a string surounded by "".</li>
+                <li><blockcode>+=</blockcode> is self plus the oposite of the equal sign.</li>
+                <li>Name elements you grab <blockcode>elementPurposeEl</blockcode>.</li>
+                <li><blockcode>let</blockcode> creates the element, it can and will be changed later.</li>
+                <li><blockcode>const</blockcode> creates the element, it can't be changed later.</li>
+                <li><blockcode>var</blockcode> is dead.</li>
+                <li><blockcode>textContent</blockcode> gets/sets the text inside the element called. It can read spaces.</li>
+                <li>use `` when you need to add variables to text.</li>
+                <li>You can't use the same name for functions as in an element.</li>
+                <li>To immediately run a function wrap the function in () and end it in ();
+                    <blockcode>
+                        (function functionName() {
+                            function actions
+                        })()
+                    </blockcode>
+                </li>
+                <li>Using onclick in HTML is less ideal then using <blockcode>addEventListener("click", function() {})</blockcode>. 
+                    You need to use ; at the end of all code for this to work.</li>
+                <li>Operator precedence is PEMDAS in JS.</li>
+                <li><blockcode>===</blockcode> means strictly equal</li>
+                <li><blockcode>==</blockcode> is less strict. It converts numbers into strings if necessary.</li>
+                <li><blockcode>=</blockcode> means it will become.</li>
+                <li>Use <blockCode>hasElementDescription</blockCode> for naming a boolean.</li>
+                <li>An empty string "" is a falsey value.</li>
+                <li>Expressions passed into conditions are translated into booleans.</li>
+                <li>Declare means to create.</li>
+                <li><blockcode>querySelector</blockcode> is more dynamic. You have to be more specific and identify the element how you would in CSS 
+                    (with . or # before the name).
+                </li><dt>DOM</dt>
+                                <dd>Document Object Model</dd>
+                                <dd>How you use JS to control websites.</dd>
+                            <dt>Escape Character</dt>
+                                <dd>A character that invokes an alternative interpretation on the following characters in a character sequence.</dd>
+                            <dt>Local Dev Environment</dt>
+                                <dd>A text editor is a tool to edit code on your computer.</dd>
+                                <dd>Version control is a tool to keep changes updated on Github.</dd>
+                                <dd class="sub-list"><span>Escape Characters List:</span>
+                                    <ul>
+                                        <li>\t = insert a tab in the text</li>
+                                        <li>\b = insert a backspace in the text</li>
+                                        <li>\n = insert a newline in the text</li>
+                                        <li>\r = insert a carriage in the text</li>
+                                        <li>\f = insert a form feed in the text</li>
+                                        <li>\' = insert a single quote character in the text</li>
+                                        <li>\" = insert a double quote character in the text</li>
+                                        <li>\\ = insert a backslash character in the text</li>
+                                    </ul>
+                                </dd>
+                            <dt>Data Type</dt>
+                                <dd>defines the data type that a variable can store</dd>
+                                <dd>Numbers, Strings, Boolean, Bigint, Undefined, Null, Symbol, Object</dd>
+                            <dt>Method</dt>
+                                <dd>Access and manipulate the data stored in an object.</dd>
+                                <dd>written as <blockcode>method()</blockcode>.</dd>
+                            <dt>createElement</dt>
+                                <dd>A function that allows you to create an element.</dd>
+                                <dd>A method that needs to be applied to the document object.</dd>
+                                <dd><blockcode>document.createElement(elementType)</blockcode></dd>
+                                <dd>Example: <blockcode>document.createElement("li")</blockcode></dd>
+                            <dt>Template Strings</dt>
+                                <dd><blockcode>`html stuff and also text and also ${variables}`</blockcode></dd>
+                            <dt>Logical Not</dt>
+                                <dd>Puting ! to mean not the following code.</dd>
+                            <dt>Hoisting</dt>
+                                <dd>Function declarations are moved to the top of their scope before code execution.</dd>
+                            <dt>NaN</dt>
+                                <dd>Not a Number</dd>
+                            <dt>Web APIs</dt>
+                                <dd>Provided by the browser.</dd>
+                                <dd>Not part of the JS language.</dd>
+                                <dd>Have functionality for DOM manipulation, data requests, timers (settimeout, setInterval), etc.</dd>
+                        </dl>
+                <li class="sub-list"><span>Arrays</span>
+                    <ul>
+                        <li>Arrays are stored in [].</li>
+                        <li>They start at 0.</li>
+                        <li>To call an array item do <blockcode>arrayName[numberYouWant]</blockcode>.</li>
+                        <li><blockcode>arrayName.length</blockcode> counts starting at one.</li>
+                        <li>An array is a copmlex data type.</li>
+                        <li><blockcode>arrayName.push(newItem)</blockcode> adds content to the end of an array.</li>
+                        <li><blockcode>arrayName.pop()</blockcode> removes the last item of an array.</li>
+                    </ul>
+                </li>
+                <li><blockcode>for (let i = 0; i &lt; maxAmountOfLoop; i++){}</blockcode></li>
+                <li><blockcode>export function(){}</blockcode> exports to another file if you import 
+                    (<blockcode>import { desiredFunction } from "fileLocation"</blockcode>) in that other file.
+                </li>
+                <li>Anytime you use the import or export in JS you have to add <blockcode>type="module"</blockcode> to the HTML JS file reference.</li>
+                <li>Name your function by thinking about what it is doing and what it's doing that to.</li>
+                <li>If you need a element from function1 use a parameter in function2 and call function2 in function1.</li>
+                <li class="sub-list"><span>Object</span>
+                    <ul>
+                        <li><blockcode>let objectName - { "key": "value"}</blockcode></li>
+                        <li>Turn an objects values into an array by using <blockcode>Object.values(objectName)</blockcode>.</li>
+                        <li>Turn an objects keys into an array by using <blockcode>Object.keys(objectName)</blockcode></li>
+                        <li>Turn an object into an array of arrays by using <blockcode>Object.entries(objectName)</blockcode>)</li>
+                    </ul>
+                </li>
+                <li><blockcode>.append(element)</blockcode> adds the element to whatever you're appending to.</li>
+                <li><blockcode>elementName.addEventListener("click"), function() {}</blockcode></li>
+                <li><blockcode>getElementbyID</blockcode></li>
+                <li><blockcode>querySelector</blockcode></li>
+                <li><blockcode>getElementbyClassName</blockcode></li>
+                <li class="sub-list"><span>The Dialog Tag</span>
+                    <ul>
+                        <li><blockcode>dialog.show()</blockcode> opens a non-modal dialog</li>
+                        <li><blockcode>dialog.showModal()</blockcode> opens a modal</li>
+                        <li><blockcode>dialog.close()</blockcode> Closes the dialog</li>
+                        <li>To close the dialog when clicking outside the dialog box:
+                            <blockcode>
+                                dialog.addEventListener("click", e=> {
+                                    const dialogDimentions = dialog.getBoundingClientRect()
+                                    if (
+                                        // clicking outside the dialog
+                                        clientX &lt; dialogDimensions.left ||
+                                        e.clientX > dialogDimensions.right ||
+                                        e.clientY &lt; dialogDimensions.top ||
+                                        e.clientY > dialogDimensions.bottom ||
+                                        // clicking the cancel button
+                                        e.target.id === "cancel-dialog-btn"
+                                    ){
+                                        dialog.close()
+                                    }
+                                })
+                            </blockcode>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span><blockcode>setTimeout</blockcode></span>
+                    <ul>
+                        <li>Delays the execution of the code inside it.</li>
+                        <li>Method.</li>
+                        <li>
+                            <blockcode>
+                                setTimeout(function(){
+                                    what you don't want to fire
+                                }, number of miliseconds you want to delay by)
+                            </blockcode>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span><blockcode>element.style</blockcode></span>
+                    <ul>
+                        <li>Targets an element's style.</li>
+                        <li><blockcode>elementName.style.what you want to change = "what you want to change it to"</blockcode></li>
+                    </ul>
+                </li>
+                <li>To override the form information being pushed into the URL query screen,
+                    <blockcode>
+                        formElement.addEventListener('submit', function(event){
+                            event.preventDefault();
+                        })
+                    </blockcode>
+                </li>
+                <li>To take control of an element is to call the element.</li>
+                <li>Any button in a form will submit by default. To stop this change the type. <blockcode>type="reset, submit, button"</blockcode></li>
+                <li>It's best practice to not declare something unless you have to.</li>
+                <li>It's best practice to only use innerHTML when you have to. Use innerText instead.</li>
+                <li class="sub-list"><span>FormData</span>
+                    <ul>
+                        <li><blockcode>FormData(formElement)</blockcode></li>
+                        <li>Returns all inputed data into an object.</li>
+                        <li>Is a constructor function.</li>
+                        <li><blockcode>const formElementData = new FormData(formElement)</blockcode></li>
+                        <li>To see what the object holds use <blockcode>formElementData.get(nameData)</blockcode></li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Disabling Elements</span>
+                    <ul>
+                        <li>Controlling when elements are usable.</li>
+                        <li>To disable on page load add <blockcode>disabled</blockcode> to HTML tag.</li>
+                        <li>To disable after load, set disabled to true.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Class List</span>
+                    <ul>
+                        <li><blockcode>element.classList.action('className')</blockcode></li>
+                        <li>Just <blockcode>element.classList</blockcode> will return the entire class list of the element.</li>
+                        <li><blockcode>
+                                element.classList.toggle('className')
+                            </blockcode>
+                            will add and remove the className from the element.
+                        </li>
+                        <li><blockcode>
+                            element.classList.remove('className') will remove className from the elements class list.
+                            </blockcode>
+                        </li>
+                        <li><blockcode>
+                            element.classList.add('className') will add className to the elements class list.
+                            </blockcode>
+                        </li>                
+                    </ul>
+                </li>
+                <li>element.classList.toggle('className') switches the usage of the classlist back and forth.</li>
+                <li class="sub-list"><span>for of</span>
+                    <ul>
+                        <li>A nicer way of iterating.</li>
+                        <il><blockcode>for (let item of items) {}</blockcode></il>
+                        <li>Iterates over object data structures.</li>
+                        <li>Iterates over the values of an iterable object. (examples of iterable objects include arrays, strings).</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>for in</span>
+                    <ul>
+                        <li><blockcode>for (let item in items){
+                            console.log(items[item])
+                        }</blockcode></li>
+                        <li>Iterates over object data structures.</li>
+                        <li>iterates over all enumerable property keys of an object.</li>
+                    </ul>
+                </li>
+                <li>Each function should do one thing.</li>
+                <li>To link a js file to another js file, put export in front of the information you want to export, and in the file you want the information in
+                    write <blockquote>import { information you want to export },from './fileThatHasInfo'</blockquote>, and in the HTML fyle add <blockcode>
+                    import = "module"</blockcode>.
+                </li>
+                <li class="sub-list"><span><blockcode>.includes()</blockcode></span>
+                    <ul>
+                        <li>A method for checking if an array holds a given value.</li>
+                        <li>level: easy</li>
+                        <li>returns boolean</li>
+                    </ul>
+                </li>
+                <li>render() ---???????</li>
+                <li class="sub-list"><span><blockcode>event.target.id</blockcode></span>
+                    <ul>
+                        <li><blockcode>
+                            container.addEventListener('click', function(event){
+                                console.log(event.target.id)
+                            })
+                        </blockcode></li>
+                        <li>If you log event, you will see PointerEvent{ isTrusted: boolean }</li>
+                        <li>The target will show the most exact location it can (p.className#idName).</li>
+                        <li>An empty area in the container will return a string.</li>
+                        <li>event.target.id would return just the id of what was clicked.</li>
+                        <li>adding <blockcode>.parentElement</blockcode> to the end of what your selecting <blockcode>(event.target.id).parentElement</blockcode>
+                            will return the parent element of the element that had an event. So 
+                            <blockcode>
+                                &lt;div class="parent-element"&gt;
+                                    &lt;div id="childElement"&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            </blockcode> 
+                            would return <blockcode>&lt;div class="parent-element"&gt;</blockcode>.
+                        </li>
+                        <li><blockcode>event.target</blockcode> will return the entire tag.</li>
+                        <li>You can add a numeric seperator, <blockcode>_</blockcode>, between numbers in the code to make it more readable and it will display without it. <blockcode>
+                            const longNumber = 9_007_199_254_740_991
+                            console.log(longNumber)//returns 9007199254740991
+                            console.log(typeof longNumber)//returns number
+                        </blockcode></li>
+                        <li>9007199254740991 is the highest number js can calculate without losing precition.</li>
+                        <li>For numbers bigger than 9007199254740991 you can use <blockcode>BigInt()</blockcode>.<blockcode>
+                            const longerNumber = 9007199254740991345n
+                            console.log(typeof longerNumber) // returns bigint
+                        </blockcode>. <blockcode>BigInt()</blockcode> is a constructor.
+                        <blockcode>
+                            const longerNumber = BigInt(9_007_199_254_740_991_345)
+                            console.log(typeof longerNumber) // returns bigint
+                            console.log(longerNumber) // returns 9007199254740990976
+                        </blockcode>. They cannot math, you cannot convert a BigInt value to a number. It is useful in contexts requiring precise handling of large integers, such as cryptography, 
+                        or when interacting with databases that use large integer identifiers.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Event Listeners</span>
+                    <ul>
+                        <li><blockcode>container.addEventListener('listenerOfChoice', function{})</blockcode></li>
+                        <li>click</li>
+                        <li>dblclick</li>
+                        <li>change</li>
+                        <li><a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank" alt="List of all the possible events">Events I have never used.</a></li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Parent Element</span>
+                    <ul>
+                        <li><blockcode>.parentElement</blockcode></li>
+                        <li>add to the end of </li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Grabbing Elements</span>
+                    <ul>
+                        <li>To one element with a given id use <blockcode>getElementByid('idName')</blockcode>.</li>
+                        <li>To grab all elements with a given class use <blockcode>getElementsByClassName('className')</blockcode>.</li>
+                        <li>To grab any element use <blockcode>querySelector('whatYouWant')</blockcode>, this is unique because it can grab
+                        psudo selectors.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Console Log</span>
+                    <ul>
+                        <li>console.log()</li>
+                        <li>Can pass in parameters</li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/console/log_static" target="_blank" alt="Shows distant sytnax.">
+                            Check the Static Method
+                        </a></li>
+                    </ul>
+                </li>
+                <li>To get wether or not an item was checked, get the element and add <blockcode>.checked</blockcode> like <blockcode>element.checked
+                    </blockcode></li>
+                <li>When naming a boolean, it is common to start the name with is or has. <blockcode>const isChecked = document.querySelector('input[type="radio"]:checked')
+                    .value</blockcode></li>
+                <li class="sub-list"><span>The Filter Method</span>
+                    <ul>
+                        <li><blockcode>oldArray.filter(function(arrayItemName){return true})</blockcode></li>
+                        <li>Getting only the elements we want from an array.</li>
+                        <li>Creates a new array.</li>
+                        <li>To filter an array of objects, </li>
+                    </ul>
+                </li>
+                <li>Use get at the begining of the name of a function when you will be returning something.</li>
+                <li class="sub-list"><span><blockcode>foreach()</blockcode></span>
+                    <ul>
+                        <li>A method for iterating over arrays.</li>
+                        <li><blockcode>
+                            arrayName.foreach(function(arrayItemName, index) {})
+                        </blockcode></li>
+                        <li>Does not return a new array.</li>
+                        <li>Use <blockcode>.forEach()</blockcode> if you don't need to create a new array.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Data Attributes</span>
+                    <ul>
+                        <li>Sorting Extra Information in HTML Elements</li>
+                        <li>Often written in documents as data-*, the star representing the name you choose.</li>
+                        <li><blockcode>data-unique-name = "data"</blockcode></li>
+                        <li>To call it in js, as an event, it will be under target, in dataset, so it would be <blockcode>event.target.dataset.dataAttributeName(without data)</blockcode>.</li>
+                        <li>Great way to relate items to an id, without re-using an id.</li>
+                        <li>If you use capital letters when assinging the data attribute, make them lowercase in js. It is best to just avoid uppercase letters.</li>
+                        <li>If you use cabob-case when asigning the data attribute, you will need to make it camalCase in js. This is the best practice for multi-word attributes.</li>
+                    </ul>
+                </li>
+                <li>One event listener is DRYer than many.</li>
+                <li class="sub-list"><span>Copying Objects and Arrays</span>
+                    <ul>
+                        <li>When you copy them in JS you are making a shallow copy.</li>
+                        <li>To make a real copy, you make a <a href="https://developer.mozilla.org/en-US/docs/Glossary/Deep_copy" target="_blank" alt="MDN Web Documentation on deep copy">deep copy</a>.</li>
+                    </ul>
+                </li>
+                <li>To switch the value of a boolean (false to true, true to false) write <blockcode>boolean = !boolean</blockcode></li>
+                <li>Using <blockcode>else if</blockcode> instead of another <blockcode>if</blockcode> will prevent the system from reading unused code.</li>
+                <li class="sub-list"><span>Conditionally Render CSS</span>
+                    <ul>
+                        <li>Giving elements different classes under different conditions.</li>
+                        <li><blockcode>
+                            let boolean = false;
+                            thingToClick.addEventListener('click', function(element){
+                                boolean = !boolean;
+                                if(boolean){
+                                    booleanClass = 'className';
+                                };
+                                let booleanHTML = &lt;div class="${booleanClass}">&gt;&lt;/div&gt;
+                            });
+                        </blockcode></li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>UUID</span>
+                    <ul>
+                        <li>Universally Unique Identifiers</li>
+                        <li>A string of 36 characters.</li>
+                        <li>Often used to identify pieces of data.</li>
+                        <li>Highly likely to be globally unique.</li>
+                        <li>Also known as GUID, or Globally Unique Identifier.</li>
+                        <li class="sub-list"><span>Can have a UUID created with a CDN</span>
+                            <ul>
+                                <li>Current most common is Version 4 UUID, as it uses randomly generated characters.</li>
+                                <li>One of the most popular tools for generating UUIDS is <a href="https://github.com/uuidjs/uuid#cdn-builds"
+                                target="_blank" alt="UUID CDN builds Github documentation">UUID JS</a>. To copy this, go to the readme, select 
+                                the CDN Builds link, copy the import, paste it in your project (test it). Make sure your html has <blockcode>
+                                type="module"</blockcode> in the script tag. Return the uuidv4 function (you can rename that) as a function 
+                                <blockcode>uuidv4()</blockcode></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><blockcode>arrayName.unshift(element)</blockcode> adds the element to the beginning of the array.</li>
+                <li class="sub-list"><span>Object Destructuring</span>
+                    <ul>
+                        <li>Extract properties from objects.</li>
+                        <li>It enables us to extract properties from objects into distinct variables.</li>
+                        <li>Helps keep your code DRY.</li>
+                        <li><blockcode>
+                            const {propertyVariableName, propertyVariableName, propertyVariableName} = objectName
+                            console.log(`display this ${propertyVariableName}'s value`)
+                        </blockcode></li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>The <blockcode>.map()</blockcode> Method</span>
+                    <ul>
+                        <li>Iterating over arrays.</li>
+                        <li><blockcode>
+                            const newArray = oldArray.map(function(nameValues, index) {
+                                //iterates through each array value
+                                //index will return the index of each value
+                            })
+                        </blockcode></li>
+                        <li>could be stored in a function instead of a const.</li>
+                        <li>Use <blockcode>.map()</blockcode> if you need to make use of the new array it returns</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>The .join() Method</span>
+                    <ul>
+                        <li>Strings from arrays.</li>
+                        <li>Concatenates elements of an array into a string.</li>
+                        <li>You choose how elements are separated.</li>
+                        <li>It returns the new string.</li>
+                        <li><blockcode>
+                            console.log(arrayName.join('what you want between each value'))
+                        </blockcode></li>
+                        <li>To have no seperator just keep an empty string.</li>
+                    </ul>
+                </li>
+                <li>All methods must end with parenthesis.</li>
+                <li>To find out what type an element is put typeof before it. It will return if it's a string, boolean, ect.</li>
+                <li><blockcode>break</blockcode> and <blockcode>continue</blockcode> can be use within for loops.</li>
+                <li>You can only chain onto a method if it returns an array.</li>
+                <li class="sub-list"><span>The For Loop</span>
+                    <ul>
+                        <li><blockcode>for (let i = 0; i &lt arr.length; i++){}</blockcode></li>
+                        <li><blockcode>for (let i = 0; i &lt arr.length; i++){
+                            if (arr.key &lt 5){break}
+                            if (arr.key &gt 5 {continue}
+                            console.log('this will not run if the arr.key is greater than or less than five'))
+                        } </blockcode></li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Various Array Methods</span>
+                    <ul>
+                        <li><blockcode>arr.every(function(arrItem){
+                            return arrItem >= 30
+                        })</blockcode> Every array item will be subject to the code within the function, and you will get a boolean true or false response. It will only return true if every item is true.</li>
+                        <li><blockcode>.some(function(arrItem){
+                            return arrItem >= 30
+                        })</blockcode> Every array item will be subject to the code within the funciton, and you will get a boolean true or false response. It will return true if one or more items are true.</li>
+                        <li><blockcode>arr.find(function(arrItem){
+                            return arrItem > 30
+                        })</blockcode> Every array item will be subject to the code within the function until one is true, you will get the items content as a response. If none are true, then it will 
+                            return undefined.
+                        </li>
+                        <li><blockcode>.findIndex(function(arrItem){
+                            return arrItem > 30
+                        })</blockcode> Every array item will be subject to the code within the function until one is true, you will get the items index number as a response. If no item is true, it will return -1.</li>
+                        <li><blockcode>arr.indexOf(arrItemContent)</blockcode> Every array item will be tested for the content until one is found with it, then it will return that items index number.</li>
+                        <li><blockcode>arr.at(-1)</blockcode> Takes a positive or negative integer and returns the item at that index. Negative integers will count back from the end of the array.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Replace Method</span>
+                    <ul>
+                        <li><blockcode>text.replace(pattern, replacement)</blockcode></li>
+                        <li><blockcode>const text = "hello how are you?"
+                            text.replace('h', 'H')
+                        </blockcode> will return 'Hello how are you', changing the first h but not the second.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>ReplaceAll Method</span>
+                    <ul>
+                        <li><blockcode>text.replaceAll(pattern, replacement)</blockcode></li>
+                        <li><blockcode>const text = "hello! how are you this morning?"
+                            text.replaceAll('h', 'H')
+                        </blockcode> will return 'Hello! How are you tHis morning', changing the all h to H.</li>
+                        <li>To avoid the above problem of capitalizing letters within words you can use regex (regular expression). This is a sequence of characters that specifies a match pattern in text.
+                            <blockcode>/[a-zA-Z1-9]/</blockcode> will find any number 1-9 and any letter, lower or uppercasea-z.
+                            <blockcode>/^\d{5} (-\d{4})?$/</blockcode> will validate US zip codes.
+                            In this case you would do text.replaceAll(/\b(h)\b/g, 'H')
+                        </li>
+                        <li>You can also use functions in the replaceAll.
+                            <blockcode>
+                                const text = "I love you with all my heart!"
+                                console.log(text.replaceAll(/\b(love|heart)\b/g, function(match){
+                                    return `${match} &lt3`
+                                }))
+                            </blockcode> will log "I love &lt3 you with all my heart &lt3".
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>RegExp</span>
+                    <ul>
+                        <li>\d = any number between 1 and 9</li>
+                        <li>. = any single character</li>
+                        <li>[abc] = will match a, b or c</li>
+                        <li>[^abc] = all but a, b or c</li>
+                        <li>[0-6] = will match any single 0, 1, 2, 3, 4, 5 or 6</li>
+                        <li>[^a-p] = will match q through z</li>
+                        <li>\w = includes any single alphanumeric character plus the underscore</li>
+                        <li>[a-z] is different then [A-Z]</li>
+                        <li>a{3} = aaa</li>
+                        <li>[wxy]{5} = any sequence with exactly 5 characters that are either w, x or y</li>
+                        <li>.{2,6} = matches any sequence that is between 2 and 6 characters long</li>
+                        <li>\d = any single digit between 0 and 9</li>
+                        <li>a* = 0 or more of a</li>
+                        <li>ab?c = abc or ac (b is optional)</li>
+                        <li>_ = a space</li>
+                        <li>\t = tab</li>
+                        <li>\n = new line</li>
+                        <li>\r = return</li>
+                        <li>\s = any white space</li>
+                        <li>\S = no white space</li>
+                        <li>g = g flag = global = looking for all instances, not just one. Needed if you are using replace all after the ending /</li>
+                        <li>i = i falg = case insensitive = </li>
+                        <li>regexp has a test method that returns a boolean. <blockcode>
+                            regex.test(text)
+                        </blockcode></li>
+                        <li>There is a RegExp Constructor. <blockcode>
+                            const textText = "hello world"
+                            const regex = new RegExp(testText, 'gi')
+                        </blockcode></li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>hasOwn/hasOwnProperty</span>
+                    <ul>
+                        <li>hasOwn is more modern.</li>
+                        <li><blockcode>Object.hasOwn(objectName, 'propertyName')</blockcode>, static method,</li>
+                        <li><blockcode>objectName.hasOwnProperty('propertyName')</blockcode></li>
+                        <li>Tells you weather the property is on the object.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Value/Reference</span>
+                    <ul>
+                        <li>Primitives, strings, numbers and booleans are passed by value.</li>
+                        <li>Objects and arrays are passed by reference.</li>
+                        <li>There are two ways to copy arrays, Deep Copy and Shallow Copy.</li>
+                        <li>Shallow Copy creates a new object or array but only at the first level. For nested objects or arrays, a shallow copy Will
+                            still hold references to the original nested objects or arrays.
+                        </li>
+                        <li>Deep copy copies the entire array or object.</li>
+                    </ul>
+                </li>
+                <li>Script tags in HTML are where you can write JS. add <blockcode>src="filename"</blockcode> to link js file to HTML file.</li>
+                <li><blockcode>console.log()</blockcode> to log to console</li>
+                <li>JS reads top to bottom. Can't access things before they're initialized.</li>
+                <li><blockcode>function functionName() {}</blockcode></li>
+                <li>Function is command.</li>
+                <li>Run is call or invoke.</li>
+                <li><blockcode>++</blockcode> is self plus one</li>
+                <li><blockcode>innerText</blockcode> gets/sets the text inside the element called. Can't read spaces.</li>
+                <li>When it's a string VS a number the string always wins.</li>
+                <li>You can use an escape character (/) to display a " in a string surounded by "".</li>
+                <li><blockcode>+=</blockcode> is self plus the oposite of the equal sign.</li>
+                <li>Name elements you grab <blockcode>elementPurposeEl</blockcode>.</li>
+                <li><blockcode>let</blockcode> creates the element, it can and will be changed later.</li>
+                <li><blockcode>const</blockcode> creates the element, it can't be changed later.</li>
+                <li><blockcode>var</blockcode> is dead.</li>
+                <li><blockcode>textContent</blockcode> gets/sets the text inside the element called. It can read spaces.</li>
+                <li>use `` when you need to add variables to text.</li>
+                <li>You can't use the same name for functions as in an element.</li>
+                <li>To immediately run a function wrap the function in () and end it in ();
+                    <blockcode>
+                        (function functionName() {
+                            function actions
+                        })()
+                    </blockcode>
+                </li>
+                <li>Using onclick in HTML is less ideal then using <blockcode>addEventListener("click", function() {})</blockcode>. 
+                    You need to use ; at the end of all code for this to work.</li>
+                <li>Operator precedence is PEMDAS in JS.</li>
+                <li><blockcode>===</blockcode> means strictly equal</li>
+                <li><blockcode>==</blockcode> is less strict. It converts numbers into strings if necessary.</li>
+                <li><blockcode>=</blockcode> means it will become.</li>
+                <li>Use <blockCode>hasElementDescription</blockCode> for naming a boolean.</li>
+                <li>An empty string "" is a falsey value.</li>
+                <li>Expressions passed into conditions are translated into booleans.</li>
+                <li>Declare means to create.</li>
+                <li><blockcode>querySelector</blockcode> is more dynamic. You have to be more specific and identify the element how you would in CSS 
+                    (with . or # before the name).
+                </li>
+                <li class="sub-list"><span>Arrays</span>
+                    <ul>
+                        <li>Arrays are stored in [].</li>
+                        <li>They start at 0.</li>
+                        <li>To call an array item do <blockcode>arrayName[numberYouWant]</blockcode>.</li>
+                        <li><blockcode>arrayName.length</blockcode> counts starting at one.</li>
+                        <li>An array is a copmlex data type.</li>
+                        <li><blockcode>arrayName.push(newItem)</blockcode> adds content to the end of an array.</li>
+                        <li><blockcode>arrayName.pop()</blockcode> removes the last item of an array.</li>
+                    </ul>
+                </li>
+                <li><blockcode>for (let i = 0; i &lt; maxAmountOfLoop; i++){}</blockcode></li>
+                <li><blockcode>export function(){}</blockcode> exports to another file if you import 
+                    (<blockcode>import { desiredFunction } from "fileLocation"</blockcode>) in that other file.
+                </li>
+                <li>Anytime you use the import or export in JS you have to add <blockcode>type="module"</blockcode> to the HTML JS file reference.</li>
+                <li>Name your function by thinking about what it is doing and what it's doing that to.</li>
+                <li>If you need a element from function1 use a parameter in function2 and call function2 in function1.</li>
+                <li class="sub-list"><span>Object</span>
+                    <ul>
+                        <li><blockcode>let objectName - { "key": "value"}</blockcode></li>
+                        <li>Turn an objects values into an array by using <blockcode>Object.values(objectName)</blockcode>.</li>
+                        <li>Turn an objects keys into an array by using <blockcode>Object.keys(objectName)</blockcode></li>
+                        <li>Turn an object into an array of arrays by using <blockcode>Object.entries(objectName)</blockcode>)</li>
+                    </ul>
+                </li>
+                <li><blockcode>.append(element)</blockcode> adds the element to whatever you're appending to.</li>
+                <li><blockcode>elementName.addEventListener("click"), function() {}</blockcode></li>
+                <li><blockcode>getElementbyID</blockcode></li>
+                <li><blockcode>querySelector</blockcode></li>
+                <li><blockcode>getElementbyClassName</blockcode></li>
+                <li class="sub-list"><span>The Dialog Tag</span>
+                    <ul>
+                        <li><blockcode>dialog.show()</blockcode> opens a non-modal dialog</li>
+                        <li><blockcode>dialog.showModal()</blockcode> opens a modal</li>
+                        <li><blockcode>dialog.close()</blockcode> Closes the dialog</li>
+                        <li>To close the dialog when clicking outside the dialog box:
+                            <blockcode>
+                                dialog.addEventListener("click", e=> {
+                                    const dialogDimentions = dialog.getBoundingClientRect()
+                                    if (
+                                        // clicking outside the dialog
+                                        clientX &lt; dialogDimensions.left ||
+                                        e.clientX > dialogDimensions.right ||
+                                        e.clientY &lt; dialogDimensions.top ||
+                                        e.clientY > dialogDimensions.bottom ||
+                                        // clicking the cancel button
+                                        e.target.id === "cancel-dialog-btn"
+                                    ){
+                                        dialog.close()
+                                    }
+                                })
+                            </blockcode>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span><blockcode>setTimeout</blockcode></span>
+                    <ul>
+                        <li>Delays the execution of the code inside it.</li>
+                        <li>Method.</li>
+                        <li><blockcode>
+                            setTimeout(function(){
+                                what you don't want to fire
+                            }, number of miliseconds you want to delay by)
+                        </blockcode</li>
+                        <li><blockcode>
+                            setTImeout(functionName, 3000, 'functionParameter', 'second parameter')
+                        </blockcode></li>
+                        <li>To stop a timeout before it runs it's code you can use <blockcode>
+                            const timer = setTimeout(functionName, 3000, 'param')
+                            document.getElementById('stopBtn').addEventListener('click', function(){
+                                clearTimeout(timer)
+                            })
+                        </blockcode></li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span><blockcode>element.style</blockcode></span>
+                    <ul>
+                        <li>Targets an element's style.</li>
+                        <li><blockcode>elementName.style.what you want to change = "what you want to change it to"</blockcode></li>
+                    </ul>
+                </li>
+                <li>To override the form information being pushed into the URL query screen,
+                    <blockcode>
+                        formElement.addEventListener('submit', function(event){
+                            event.preventDefault();
+                        })
+                    </blockcode>
+                </li>
+                <li>To take control of an element is to call the element.</li>
+                <li>Any button in a form will submit by default. To stop this change the type. <blockcode>type="reset, submit, button"</blockcode></li>
+                <li>It's best practice to not declare something unless you have to.</li>
+                <li>It's best practice to only use innerHTML when you have to. Use innerText instead.</li>
+                <li class="sub-list"><span>FormData</span>
+                    <ul>
+                        <li><blockcode>FormData(formElement)</blockcode></li>
+                        <li>Returns all inputed data into an object.</li>
+                        <li>Is a constructor function.</li>
+                        <li><blockcode>const formElementData = new FormData(formElement)</blockcode></li>
+                        <li>To see what the object holds use <blockcode>formElementData.get(nameData)</blockcode></li>
+                        <li>If you place an input within innerHTML someone can put malicious code. If this is the case, use textContent instead</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Disabling Elements</span>
+                    <ul>
+                        <li>Controlling when elements are usable.</li>
+                        <li>To disable on page load add <blockcode>disabled</blockcode> to HTML tag.</li>
+                        <li>To disable after load, set disabled to true.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Class List</span>
+                    <ul>
+                        <li><blockcode>element.classList.action('className')</blockcode></li>
+                        <li>Just <blockcode>element.classList</blockcode> will return the entire class list of the element.</li>
+                        <li><blockcode>
+                                element.classList.toggle('className')
+                            </blockcode>
+                            will add and remove the className from the element.
+                        </li>
+                        <li><blockcode>
+                            element.classList.remove('className') will remove className from the elements class list.
+                            </blockcode>
+                        </li>
+                        <li><blockcode>
+                            element.classList.add('className') will add className to the elements class list.
+                            </blockcode>
+                        </li>                
+                    </ul>
+                </li>
+                <li>element.classList.toggle('className') switches the usage of the classlist back and forth.</li>
+                <li class="sub-list"><span>for of</span>
+                    <ul>
+                        <li>A nicer way of iterating.</li>
+                        <li><blockcode>
+                            for (let item of items) {}
+                        </blockcode></li>
+                    </ul>
+                </li>
+                <li>Each function should do one thing.</li>
+                <li>To link a js file to another js file, put export in front of the information you want to export, and in the file you want the information in
+                    write <blockquote>import { information you want to export },from './fileThatHasInfo'</blockquote>, and in the HTML fyle add <blockcode>
+                    import = "module"</blockcode>.
+                </li>
+                <li class="sub-list"><span><blockcode>.includes()</blockcode></span>
+                    <ul>
+                        <li>A method for checking if an array holds a given value.</li>
+                        <li>level: easy</li>
+                        <li>returns boolean</li>
+                    </ul>
+                </li>
+                <li>render() ---???????</li>
+                <li class="sub-list"><span><blockcode>event.target.id</blockcode></span>
+                    <ul>
+                        <li><blockcode>
+                            container.addEventListener('click', function(event){
+                                console.log(event.target.id)
+                            })
+                        </blockcode></li>
+                        <li>If you log event, you will see PointerEvent{ isTrusted: boolean }</li>
+                        <li>The target will show the most exact location it can (p.className#idName).</li>
+                        <li>An empty area in the container will return a string.</li>
+                        <li>event.target.id would return just the id of what was clicked.</li>
+                        <li>adding <blockcode>.parentElement</blockcode> to the end of what your selecting <blockcode>(event.target.id).parentElement</blockcode>
+                            will return the parent element of the element that had an event. So 
+                            <blockcode>
+                                &lt;div class="parent-element"&gt;
+                                    &lt;div id="childElement"&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            </blockcode> 
+                            would return <blockcode>&lt;div class="parent-element"&gt;</blockcode>.
+                        </li>
+                        <li><blockcode>event.target</blockcode> will return the entire tag.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Event Listeners</span>
+                    <ul>
+                        <li><blockcode>container.addEventListener('listenerOfChoice', function{})</blockcode></li>
+                        <li>click</li>
+                        <li>dblclick</li>
+                        <li>change</li>
+                        <li><a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank" alt="List of all the possible events">Events I have never used.</a></li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Parent Element</span>
+                    <ul>
+                        <li><blockcode>.parentElement</blockcode></li>
+                        <li>add to the end of </li>
+                    </ul>
+                </li>
+                <li class="sub-list">
+                    <ul>
+                        <li>To one element with a given id use <blockcode>getElementByid('idName')</blockcode>.</li>
+                        <li>To grab all elements with a given class use <blockcode>getElementsByClassName('className')</blockcode>.</li>
+                    </ul>
+                </li>
+                <li>You can usually get rid of an <blockcode>else</blockcode> if you are returning in the <blockcode>if</blockcode>.</li>
+                <li class="sub-list"><span>Function Expressions</span>
+                    <ul>
+                        <li>Different Syntax and Behavior.</li>
+                        <li>Are not hoisted (cleaner).</li>
+                        <li><blockcode>
+                            const name = function(parameter){}
+                        </blockcode></li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Arrow Functions</span>
+                    <ul>
+                        <li>Ultra Consise functions.</li>
+                        <li>One parameter: <blockcode>
+                            const name = parameter => { return stuff }
+                        </blockcode> or <blockcode>
+                            const name = (parameter) => { return stuff }
+                        </blockcode></li>
+                        <li>No parameter: <blockcode>
+                            const name = () => {}
+                        </blockcode></li>
+                        <li>Multiple parameters: <blockcode>
+                            const name = (parameter1, parameter2) => { return stuff}
+                        </blockcode></li>
+                        <li>You have to add the curly braces and return keyword when there's more complex logic, but when it's one simple line of code you don't need the curly braces and return keyword.</li>
+                        <li>If you don't return anything it is undefined.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Import and Export</span>
+                    <ul>
+                        <li class="sub-sub-list"><span>Name Export</span>
+                            <ul>
+                                <li>To rename what you're importing ad an as <blockcode>
+                                    import { oldName as newName } from 'fileLocation'
+                                </blockcode></li>
+                                <li>To import multiple things from one file, use a comma <blockcode>
+                                    import { oneThing, secondThing } from 'fileLocation'
+                                </blockcode> You must export them both.</li>
+                                </blockcode>, but if you do you have to name every name export that is passed in that import.</li>
+                                <li>To export multiple exports <blockcode>export { exportNameOne, exportName2}</blockcode></li>
+                            </ul>
+                        </li>
+                        <li class="sub-sub-list"><span>Default Export</span>
+                            <ul>
+                                <li><blockcode>
+                                    export default function(param1, param2){
+                                        //code stuff
+                                    }
+                                </blockcode></li>
+                                <li>Gives you the advantage of calling this function whatever you want. Renaming the function can cause
+                                    confustion and make code less readable. <blockcode>
+                                    import nameYouWant from './fileLocation.js'
+                                </blockcode></li>
+                                <li>You can only have one default export from a file.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>The <blockcode>.reduce()</blockcode> Method</span>
+                    <ul>
+                        <li>Returns only one thing from an array.</li>
+                        <li>Takes in a function.</li>
+                        <li>Iterates through the array given the parameters till it has combined all values. <blockcode>
+                            arrayName.reduce(function(total, currentElementb ){})
+                        </blockcode></li>
+                        <li>Must use return keyword.</li>
+                        <li>To get a value of an array</li>
+                        <li>Written as arrow function <blockcode>
+                            const totalOfArray = arrayName.reduce(
+                                (param1, param2) => param1 + param2,
+                            );
+                        </blockcode></li>
+                        <li>When using objects and returning numbers with a reduce method <blockcode>
+                            const total = array.reduce(function(total, currentElementb){
+                                return total + currentElementb.numbersKey
+                            }, 0)
+                        </blockcode> The 0 will set the default start of the total to be 0, instead of an object.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Default Parameters</span>
+                    <ul>
+                        <li>Protection against bugs.</li>
+                        <li><blockcode>
+                            function functionName(arrayName, secondParam = defaultValue){}
+                        </blockcode></li>
+                        <li>The defulat will only be used when you don't pass in an argument when calling the function.</li>
+                        
+                    </ul>
+                </li>
+                <li class="sub-list"><span>The Ternary Operator</span>
+                    <ul>
+                        <li>An alternative to if/else (sometimes).</li>
+                        <li><blockcode>condition(true or false value) ? expression(executes if true) : expression(executes if false)</blockcode></li>
+                        <li><blockcode>condition ? ifTrue : condition ? ifTrue : else</blockcode></li>
+                        <li>Complex login is not easy to read with a ternary operator.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>The Rest Parameter</span>
+                    <ul>
+                        <li>Catching the rest of the arguments.</li>
+                        <li><blockcode>
+                            function functionName(parameter, ...restParameterName){
+                                //iterates through restParameterName as many times as there are parameters for it.
+                            }
+                            functionName('param1', 'param2', 'param3', 'param4', 'param5',)
+                            //Would go through function for all entered params 1-5
+                        </blockcode></li>
+                        <li>Taking in the REST of the arguments (get it).</li>
+                        <li>The rest parameter must go last.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>The Spread Operator</span>
+                    <ul>
+                        <li>Expanding and joining arrays.</li>
+                        <li><blockcode>
+                            const arrayOne = ['arrayStuff1', 'arrayStuff2', 'arrayStuff3']
+
+                            console.log(...arrayOne)
+                            //logs arrayStuff1 arrayStuff2 arrayStuff3
+                        </blockcode></li>
+                        <li>Really good way of making a copy of an array <blockcode>
+                            const arrayOne = ['arrayStuff1', 'arrayStuff2', 'arrayStuff3']
+                            const arrayOneCopy = [...arrayOne]
+
+                            console.log(arrayOneCopy)
+                            //logs ['arrayStuff1', 'arrayStuff2', 'arrayStuff3']
+                        </blockcode></li>
+                        <li>Useful for combining arrays in a new array <blockcode>
+                            const arrayOne = ['arrayStuff1', 'arrayStuff2', 'arrayStuff3']
+                            const arrayTwo = ['array2Stuff1', 'array2Stuff2', 'array2Stuff3']
+                            const arrayThree = ['array3Stuff1', 'array3Stuff2', 'array3Stuff3']
+
+                            const combinedArrays = [...arrayOne, ...arrayTwo, ...arrayThree]
+
+                            console.log(combinedArrays)
+                            //logs ['arrayStuff1', 'arrayStuff2', 'arrayStuff3', 'array2Stuff1', 'array2Stuff2', 'array2Stuff3', 'array3Stuff1', 'array3Stuff2', 'array3Stuff3']
+                        </blockcode></li>
+                        <li>Shallow Copy</li>
+                    </ul>
+                </li>
+                <li>To find the highest number of a list of numbers use <blockcode>Math.max(numberlist)</blockcode>.</li>
+                <li>To find the loweset number of a list of numbers use <blockcode>Math.min(numberlist)</blockcode>.</li>
+                <li class="sub-list"><span>Short-Circuit</span>
+                    <ul>
+                        <li>More concise code for conditional logic.</li>
+                        <li>The logical OR operator <blockcode>||</blockcode>. Evaluates from left to right and stops evaulating once it finds something truthy. <blockcode>
+                            const arrayName = {
+                                key1: 'value1'
+                                //key2: 'value2'
+                            }
+                            const variable = array.key2 || 'That key does not exist'
+                            console.log(variable)
+                            //logs 'That key does not exist'
+                        </blockcode></li>
+                        <li>The logical AND operator <blockcode>&&</blockcode>. Evaluates from left to right and if the stuff on the left is true, executes the stuff on the right <blockcode>
+                            const exampleArray = {
+                                key1: 'value1'
+                            }
+                            exampleArray.key1 === 'value1' && console.log('This is ran')
+                            //logs 'This is ran'
+                            exampleArray.key1 === 'value2' && console.log('This is not ran')
+                            //nothing is logged
+                        </blockcode></li>
+                        <li>Nullish Coalescing Operator, <blockcode>??</blockcode>, returns the right hand operator truthy value if the left hand operator is null or undefined.</li>
+                        <li>Optional Chaining, <blockcode>?.</blockcode>, adds optional additions to your chain. <blockcode>
+                            const library = {
+                                sections: {
+                                    fantasy: [
+                                        {title: 'The Long Way to a Small, Angry Planet'}
+                                    ]
+                                }
+                            }
+                            console.log(library?.sections?.fantasy[0]?.title)
+                        </blockcode> Would log 'The Long Way to a Small, Angry Planet'. If anything is wrong, it will log undefined, instead of throwing an error.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Switch Statements</span>
+                    <ul>
+                        <li>Select one of many code blocks to execute.</li>
+                        <li><blockcode>
+                            function functionName(parameter){
+                                switch(parameter){
+                                    case 'parameter possiblity';
+                                        //the following code will only run if the case is correct
+                                        break //won't run the code below
+                                    case 'another possibility':
+                                        //the following code will only run if the case is correct
+                                        break
+                                    default:
+                                        //runs if none of the cases are true
+                                }
+                            }
+                        </blockcode></li>
+                        <li>The last item (default or case) does not need a break.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Constructors</span>
+                    <ul>
+                        <li>Constructors have two main categories, Inbuilt and Custom.</li>
+                        <li>Inbuilt Constructors provide objects in various predetermined formats, like Date Objects and Error Objects,
+                            and Objects for each data type.
+                        </li>
+                        <li>Custom Constructors are constructors we design ourselves to provide objects for our own specific purposes.</li>
+                        <li class="sub-sub-list"><span>The Date Constructor</span>
+                            <ul>
+                                <li>An inbuilt constructor.</li>
+                                <li>To use the Date() constructor <blockcode>
+                                    const nameofThing = new Date()
+                                    //returns an object
+                                    //return example: 2024-06-27T22:42:07.898Z
+                                    //To make it more readable put 
+                                    nameofThing.toString()
+                                    //return example: Thu Jun 27 2024 16:43:55 GMT-0600 (Mountain Daylight Time)
+                                    //gives exact date and time of where you are
+                                </blockcode></li>
+                                <li>To return the current year use <blockcode>
+                                    new Date().getFullYear()
+                                </blockcode></li>
+                                <li>luxon makes working with dates and times easier.</li>
+                            </ul>
+                        </li>
+                        <li class="sub-sub-list"><span>The Error Constructor</span>
+                            <ul>
+                                <li><blockcode>
+                                    throw new Error('Your error here')
+                                </blockcode> The throw keyword will stop all the code after your throw from running.</li>
+                                <li>Code will continue running after your error<blockcode>
+                                    console.log(new Error('Your error here'))
+                                </blockcode></li>
+                            </ul>
+                        </li>
+                        <li>The Object Constructor <blockcode>new Object()</blockcode> will create a new object. Much better to use the litteral <blockcode>{}</blockcode></li>
+                        <li><blockcode>String()</blockcode></li>
+                        <li><blockcode>Number()</blockcode></li>
+                        <li><blockcode>Array()</blockcode></li>
+                        <li><blockcode>Boolean()</blockcode></li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>The Error() Constructor</span>
+                    <ul>
+                        <li><blockcode>
+                            throw new Error('error text')
+                        </blockcode></li>
+                        <li>throw will stop all following code from executing.</li>
+                    </ul>
+                </li>
+                <li>Other Constructors are <blockcode>String() Number() Array() Object() Boolean()</blockcode> but they are rarely used.</li>
+                <li>You can add a function to within an object and access it. <blockcode>
+                    const objectName = {key1: 'value1', key2: 'value2', key3: function(){}}
+                    objectName.key3()
+                </blockcode></li>
+                <li><blockcode>this</blockcode> can be used within an object to refer to the object name instead of typing it out.
+                If you are using an arrow function within the object using <blockcode>this</blockcode> will refer to what's beyond the function (window).</li>
+                <li class="sub-list"><span>Building Your Own Constructor Function</span>
+                    <ul>
+                        <li>You provide the properties and methods.</li>
+                        <li><blockcode>
+                            function Constructor(name1, name2){
+                                this.name1 = name1
+                                this.name2 = name2
+                                this.function = function(){}
+                            }
+                            const newObj = new Constructor('name1', 'name2')
+                            newObj.function()
+                        </blockcode></li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Classes</span>
+                    <ul>
+                        <li>Templates for objects.</li>
+                        <li><blockcode>
+                            class NameofClass {
+                                constructor(param1, param2){
+                                    this.param1 = param1
+                                    this.param2 = param2
+                                }
+
+                                fuctionName() {
+                                    
+                                }
+                            }
+                            const thingName = new NameofClass('param1', param2)
+                            thingName.functionName()
+                        </blockcode></li>
+                        <li>needs to be constructor. cannot be called anything else</li>
+                        <li>Biggest difference from Constructor is classes are not hoisted.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>Debugging</span>
+                    <ul>
+                        <li class="sub-sub-list"><span>Suntax and Logic Errors</span>
+                            <ul>
+                                <li>SyntaxError: missing &rpar; after argument list means not enough &rpar;</li>
+                                <li>SyntaxError: Unexpected token '&rpar;' means not enough &rpar;s</li>
+                                <li>TypeError: varName.value.addEventListener is not a function means js is expected a value from a function, but can't find it.</li>
+                                <li>ReferenceError: VarName is not defined means you probably mispelled it, or it isn't define there.</li>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors" target="_blank" alt="Learn more about JavaScript error references from MDN.">To learn more about errors</a></a></li>
+                            </ul>
+                        </li>
+                        
+                        <li>To intentionally throw an error <blockcode>
+                            function functionName(parameter){
+                                try {
+                                    if (typeof parameter === 'number'){
+                                        console.log(parameter)
+                                    } else {
+                                        throw new ReferenceError('Error Message')
+                                    }
+                                } catch (err) {
+                                    console.log('Error: ' + err)
+                                }
+                            }
+                            functionName('String')
+
+                            //logs "Error: ReferenceError: Error Message"
+                        </blockcode></li>
+
+                        <li class="sub-sub-list"><span>Helpful Debugging Tool</span>
+                            <ul>
+                                <li>In inspector (ctrl/cmnd + i), find Sourches, Breakpoints (Run code until a breakpoint, allowing you to see what happens up to that point. Great to execute code step by step until you find the problem.)
+                                    , Watchers (Monitor the values of variables or expressions overtime as you step through your code. useful to see how and when a value changes during your code.).
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="https://firefox-source-docs.mozilla.org/devtools-user/debugger/" target="_blank" alt="Firefox source docs on Javascript debugging">Go to this doc to learn more advanced debugging skills.</a></li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span><blockcode>setInterval()</blockcode></span>
+                    <ul>
+                        <li>Makes code repeatedly execute and regular intervals.</li>
+                        <li><blockcode>
+                            const intervalTimer = setInterval(function(){
+                                //do code
+                                clearInterval(intervalTimer)
+                            }, 1000)
+                        </blockcode></li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>JS Runtime Environment (the V8 Engine)</span>
+                    <ul>
+                        <li>The Heap - handles memory allocations so we don't have to.</li>
+                        <li>The Call Stack - where code executes - As js is single threaded, the call stack can only excecute one piece of code at a time in its single thread.</li>
+                        <li>Js is helped by WebAPIs, task queue, and event loop, all are not a part of the js language.</li>
+                        <li>JS can multi-task (<blockcode>.setTimeout()</blockcode>, <blockcode>.setInterval()</blockcode>, fetching data across the network, promises).</li>
+                        <li>The webAPI is what counts for timeouts and intervals. After the time is done it passes the code to the Task Queue, which will send the code at the top of the queue to the call stack once it is empty.</li>
+                        <li>If code is complex, the execution of setTimout and setInterval will take longer. It will never take the exact ms you put in, just slliiiiightly above it. Unoticable.</li>
+                    </ul>
+                </li>
+                <li><blockcode>performance.now()</blockcode> is a really super accurate timestamp.</li>
+                <li>++Pre-increment, just move the increment opperator to the front of your expression.<blockcode>return ++count</blockcode>. The pre-increment operator increments the variable's value before the result of the increment is used in an expression.</li>
+                <li>--Pre-decrement, just move the decrement opperator to the front of your expression.<blockcode>return --loss</blockcode>. The pre-decrement operator decreases the variable's value before the result of the decrement is used in an expression.</li>
+                <li>Number Separators will separate out the digits into chunks</li>
+                <li class="sub-list"><span><blockcode>Object.assign()</blockcode></span>
+                    <ul>
+                        <li>Makes a shadow copy of an object.</li>
+                        <li>Copies properties from a source object to a target object</li>
+                        <li>Returns the new version of the target object.</li>
+                        <li><blockcode>
+                            const source = {key: 'value', keyObj: {'value2', 'value2', 'value3'}}
+                            const target = {}
+                            Object.assign(target, source)
+                            source.keyObj[0] = 'value1'
+                            console.log(target)
+                        </blockcode> will log {key: 'value', keyObj: {'value1', 'value2', 'value3'}}.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span><blockcode>structuredClone()</blockcode></span>
+                    <ul>
+                        <li>Makes a deep copy.</li>
+                        <li><blockcode>
+                        <li><blockcode>
+                            const source = {key: 'value', keyObj: {'value2', 'value2', 'value3'}}
+                            const target = structuredClone(source)
+                            source.keyObj[0] = 'value1'
+                            console.log(target)
+                        </blockcode> will log {key: 'value', keyObj: {'value2', 'value2', 'value3'}}.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span><blockcode>this</blockcode></span>
+                    <ul>
+                        <li><blockcode>
+                            const obj = {
+                                key1: 'value1',
+                                key2: 'value2',
+                                key3: function(){
+                                    console.log(this)
+                                }
+                                obj.key3()
+                            }
+                        </blockcode> will log {key1: 'value1', key2: 'value2', key3: ƒ()}. If you use an arrow function it will log out "window" instead.</li>
+                    </ul>
+                </li>
+                <li class="sub-list"><span>The <blockcode>.bind()</blockcode> method</span>
+                    <ul>
+                        <li><blockcode>
+                            const obj = {
+                                key1: 'value1',
+                                key2: 'value2',
+                                key3: function(){
+                                    console.log(this)
+                                }
+                            }
+                            const objDetails = obj.key3.bind(obj)
+                        </blockcode> logs out {key1: 'value1', key2: 'value2', key3: ƒ()}</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="accordion">
+            <h3 class="accordion-name">Resources<span class="accordion-arrow"></span></h3>
+            <dl class="inner-accordion-content">
+                <dt></dt>
+                    <dd></dd>
+            </dl>
+        </div>
+        <div class="accordion">
+            <h3 class="accordion-name">Definitions<span class="accordion-arrow"></span></h3>
+            <dl class="inner-accordion-content">
+                <dt>DOM</dt>
+                    <dd>Document Object Model</dd>
+                    <dd>How you use JS to control websites.</dd>
+                <dt>Escape Character</dt>
+                    <dd>A character that invokes an alternative interpretation on the following characters in a character sequence.</dd>
+                <dt>Local Dev Environment</dt>
+                    <dd>A text editor is a tool to edit code on your computer.</dd>
+                    <dd>Version control is a tool to keep changes updated on Github.</dd>
+                    <dd class="sub-list"><span>Escape Characters List:</span>
+                        <ul>
+                            <li>\t = insert a tab in the text</li>
+                            <li>\b = insert a backspace in the text</li>
+                            <li>\n = insert a newline in the text</li>
+                            <li>\r = insert a carriage in the text</li>
+                            <li>\f = insert a form feed in the text</li>
+                            <li>\' = insert a single quote character in the text</li>
+                            <li>\" = insert a double quote character in the text</li>
+                            <li>\\ = insert a backslash character in the text</li>
+                        </ul>
+                    </dd>
+                <dt>Data Type</dt>
+                    <dd>defines the data type that a variable can store</dd>
+                    <dd>Numbers, Strings, Boolean, Bigint, Undefined, Null, Symbol, Object</dd>
+                <dt>Method</dt>
+                    <dd>Access and manipulate the data stored in an object.</dd>
+                    <dd>written as <blockcode>method()</blockcode>.</dd>
+                <dt>createElement</dt>
+                    <dd>A function that allows you to create an element.</dd>
+                    <dd>A method that needs to be applied to the document object.</dd>
+                    <dd><blockcode>document.createElement(elementType)</blockcode></dd>
+                    <dd>Example: <blockcode>document.createElement("li")</blockcode></dd>
+                <dt>Template Strings</dt>
+                    <dd><blockcode>`html stuff and also text and also ${variables}`</blockcode></dd>
+                <dt>Logical Not</dt>
+                    <dd>Puting ! to mean not the following code.</dd>
+                    <dt>Hoisting</dt>
+                    <dd>Function declarations are moved to the top of their scope before code execution.</dd>
+                <dt>NaN</dt>
+                    <dd>Not a Number</dd>
+                <dt>Web APIs</dt>
+                    <dd>Provided by the browser.</dd>
+                    <dd>Not part of the JS language.</dd>
+                    <dd>Have functionality for DOM manipulation, data requests, timers (settimeout, setInterval), etc.</dd>
+            </dl>
+        </div>
+        <div class="accordion">
+            <h3 class="accordion-name">Questions<span class="accordion-arrow"></span></h3>
+            <ul class="inner-accordion-content">
+                <li>Why does getElementByClassName return an array?</li>
+                <li>Is it better to use "" or '' in js?</li>
+                <li>What does i in the for loop mean?</li>
+                <li>Long but accurate function names, yes or no?</li>
+                <li>Is it bad practice to put a setTimeout method wihtin another setTimeout method?</li>
+                <li>Defining everything before using it or defining everything?<br />
+                    <blockcode>
+                        let target = e.target.id
+                        console.log(target)
+                    </blockcode> or
+                    <blockcode>
+                        console.log(e.target.id)
+                    </blockcode>
+                </li>
+                <li>How do you write a data attribute with multiple words in html and js?</li>
+                <li>If you store a function within a data obj and export the obj do you have to export the function too?</li>
+            </ul>
+        </div>
+        <div class="accordion">
+            <h3 class="accordion-name">Opinions<span class="accordion-arrow"></span></h3>
+            <ul class="inner-accordion-content">        
+                <li>You should separate functions from event listeners (call the function withing the event listener istead of writing it there).</li>
+                <li>JavaScript is a single-threaded, non-blocking language.</li>
+            </ul>
+        </div>
+    </main>
+    <script type="module" src="/index.js"></script>
+</body>
+</html>
