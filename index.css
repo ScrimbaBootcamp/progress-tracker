@@ -63,16 +63,8 @@
 
 .nav-items a {
   text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
   color: #333;
   font-weight: 500;
-  transition: 0.3s ease-in-out;
-}
-
-.nav-items a:hover {
-  background-color: #007bff;
-  color: #fff;
 }
 
 .btn-contribute {
